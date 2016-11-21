@@ -1,0 +1,149 @@
+nav > .container-fluid{
+  padding-left: 20%;
+}
+
+.navbar-brand{
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-nav{
+  padding-left: 5%;
+}
+
+.main{
+  padding-top: 80px;
+}
+
+#hello{
+  margin: 0 auto;
+  width:70%;
+  height: 400px;
+}
+
+#player-card{
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 70%;
+  height: 400px;
+  /*background-color: #eee;*/
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.row{
+  height: 100%;
+  margin: 0;
+}
+
+.col-md-5 > h2{
+  text-align: center;
+}
+
+.col-md-5 > hr{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.progress{
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  height: 5px;
+}
+
+.progress-bar{
+  background-color: #ff5722;
+}
+
+.next-level{
+  position: absolute;
+  right: .8vw;
+}
+
+#avatar{
+  padding-left: 10px;
+  padding-right: 10px;
+  /*background-color: #aaa;*/
+  height:100%;
+  /*text-align: center;*/
+  font-size: .8vw;
+}
+
+#avatar > img{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.4);
+}
+
+#avatar > hr{
+  margin: 10px;
+  margin-top: 15px;
+}
+
+#avatar > span{
+  width: 100%;
+  white-space: nowrap;
+
+}
+
+#skills{
+  /*background-color: #bbb;*/
+  height:100%;
+}
+
+#achievements{
+  /*background-color: #ccc;*/
+  height:100%;
+}
+
+#achievements > .row{
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.row > .col-sm-3 {
+  height: 100%;
+  padding: 0;
+  background-color: #eee;
+}
+
+.achievement-contents{
+  margin:5px;
+  margin-bottom: 0;
+  background: #fff;
+  height: calc(100% - 5px);
+  width: calc(100% - 10px);
+}
+
+.achievement-icon{
+  height: 65%;
+}
+
+.achievement-icon > img{
+  height: 100%;
+  margin: 0 auto;
+  padding: 6%;
+}
+
+.achievement-score{
+  height: 35%;
+  background-color: #eee;
+}
+
+.score{
+  margin: 0 auto;
+  height: 100%;
+}
+
+.score > span{
+  position: absolute;
+  bottom: 8px;
+  left: calc(50% - 8px);
+}
+
+@media (min-width: 768px){
+  .navbar-header{
+    display: none;
+  }
+}
