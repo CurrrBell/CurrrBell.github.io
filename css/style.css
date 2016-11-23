@@ -11,6 +11,7 @@ nav > .container-fluid{
   padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-right: 20px;
 }
 
 .navbar{
@@ -18,7 +19,7 @@ nav > .container-fluid{
 }
 
 .navbar-nav{
-  padding-left: 5%;
+  /*padding-left: 5%;*/
 }
 
 .navbar-default{
@@ -295,6 +296,19 @@ footer > .row{
   height: 250px;
   width: 80%;
   margin: 0 auto;
+}
+
+footer > .row > .col-lg-2{
+  width: 20%;
+}
+
+#footer-logo{
+  margin: 10px;
+  margin-top: 70px;
+}
+
+#Underline{
+  fill: azure;
 }
 
 .footer-link{
