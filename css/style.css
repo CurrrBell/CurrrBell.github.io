@@ -150,6 +150,22 @@ nav > .container-fluid{
   margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,.4);
+  animation: avatarfade 3.8s ease-in-out;
+  position: relative;
+}
+
+@keyframes avatarfade {
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+    left: -20px;
+  }
+  100%{
+    opacity: 1;
+    left: 0;
+  }
 }
 
 #avatar > hr{
@@ -166,6 +182,50 @@ nav > .container-fluid{
 #skills{
   /*background-color: #bbb;*/
   height:100%;
+}
+
+#skills > h2{
+  animation: card-title 4s ease-in-out;
+  position: relative;
+}
+
+#achievements > h2{
+  animation: card-title 4.2s ease-in-out;
+  position: relative;
+}
+
+#skills-content{
+  animation: card-content 4s ease-in-out;
+}
+
+#achievements-content{
+  animation: card-content 4s ease-in-out;
+}
+
+@keyframes card-title{
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+    top: -5px;
+  }
+  100%{
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes card-content {
+  0%{
+    opacity: 0;
+  }
+  85%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 #achievements{
