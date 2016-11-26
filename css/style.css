@@ -22,12 +22,15 @@ nav > .container-fluid{
   /*padding-left: 5%;*/
 }
 
+
+
 .navbar-default{
   background-color: #fff;
 }
 
 .navbar-default .navbar-nav > .active > a{
   background-color: #fff;
+  color: #ff5722;
   border-bottom: 4px solid #ff5722;
 }
 
@@ -50,7 +53,6 @@ nav > .container-fluid{
   font-family: 'Courgette', cursive;
   color: #000;
   font-size: 100px;
-  position: relative;
   animation-name: fadeslide;
   animation-duration: 2s;
   animation-timing-function: ease-out;
@@ -59,12 +61,11 @@ nav > .container-fluid{
 @keyframes fadeslide {
   0%{
     opacity: 0;
-    left: -60px;
+    transform: translate3d(-30px,0px,0px);
   }
 
   100%{
     opacity: 1;
-    left: 0;
   }
 
 }
@@ -74,7 +75,6 @@ nav > .container-fluid{
   /*opacity: 0;*/
   font-size: 50px;
   font-family: 'Lato', sans-serif;
-  position: relative;
   animation-name: hellofade;
   animation-duration: 3s;
   animation-timing-function: ease-out;
@@ -87,14 +87,13 @@ nav > .container-fluid{
   }
   66%{
     opacity: 0;
-    bottom: -10px;
+    transform: translate3d(0px,10px,0px);
   }
   90%{
     opacity: 1;
   }
   100%{
     opacity: 1;
-    bottom: 0;
   }
 }
 
@@ -151,7 +150,6 @@ nav > .container-fluid{
   margin-bottom: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,.4);
   animation: avatarfade 3.8s ease-in-out;
-  position: relative;
 }
 
 @keyframes avatarfade {
@@ -160,11 +158,26 @@ nav > .container-fluid{
   }
   80%{
     opacity: 0;
-    left: -20px;
+    transform: translate3d(-20px,0px,0px);
   }
   100%{
     opacity: 1;
-    left: 0;
+  }
+}
+
+#avatar-info{
+  animation: avatar-content 4s ease-in-out;
+}
+
+@keyframes avatar-content{
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
 
@@ -186,12 +199,30 @@ nav > .container-fluid{
 
 #skills > h2{
   animation: card-title 4s ease-in-out;
-  position: relative;
 }
 
 #achievements > h2{
   animation: card-title 4.2s ease-in-out;
-  position: relative;
+}
+
+#skills > hr{
+  animation: card-hr 4s ease-in-out;
+}
+
+#achievements > hr{
+  animation: card-hr 4s ease-in-out;
+}
+
+@keyframes card-hr{
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 #skills-content{
@@ -208,11 +239,10 @@ nav > .container-fluid{
   }
   80%{
     opacity: 0;
-    top: -5px;
+    transform: translate3d(0px,-5px,0px);
   }
   100%{
     opacity: 1;
-    top: 0;
   }
 }
 
@@ -233,7 +263,7 @@ nav > .container-fluid{
   height:100%;
 }
 
-#achievements > .row{
+#achievements-content > .row{
   height: 100px;
   margin-bottom: 10px;
 }
@@ -278,8 +308,9 @@ nav > .container-fluid{
   left: calc(50% - 8px);
 }
 
-#timeline{
+#timeline-section-1{
   width: 100%;
+  height: 400px;
 }
 
 .timeline-row{
@@ -314,6 +345,11 @@ nav > .container-fluid{
   float: left;
 }
 
+.timeline-level{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .timeline-milestone{
   width: 100%;
 }
@@ -321,11 +357,37 @@ nav > .container-fluid{
 .timeline-dot{
   color: #ff5722;
   display: block;
-  width: 7px;
-  height: 20px;
+  width: 5px;
+  height: 25px;
   margin: 0 auto;
+  animation: timeline-dot-scoot ease-in-out;
   /*margin-top: -5px;*/
-  font-size: 30px;
+}
+
+.timeline-dot:nth-child(2){
+  animation-duration: 1s;
+}
+.timeline-dot:nth-child(3){
+  animation-duration: 1.1s;
+}
+.timeline-dot:nth-child(4){
+  animation-duration: 1.2s;
+}
+.timeline-dot:nth-child(5){
+  animation-duration: 1.3s;
+}
+
+@keyframes timeline-dot-scoot {
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+    transform: translate3d(-10px,0px,0px);
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .timeline-caption{
