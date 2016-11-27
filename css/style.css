@@ -1,5 +1,5 @@
 nav{
-  box-shadow: 0px 0px 3px rgba(0,0,0,.4);
+  box-shadow: 0px 10px 10px rgba(0,0,0,.1);
 }
 
 nav > .container-fluid{
@@ -21,8 +21,6 @@ nav > .container-fluid{
 .navbar-nav{
   /*padding-left: 5%;*/
 }
-
-
 
 .navbar-default{
   background-color: #fff;
@@ -318,6 +316,28 @@ nav > .container-fluid{
   height: 200px;
 }
 
+.timeline-row > p{
+  margin-top: 80px;
+  animation: caption-right ease-in-out;
+}
+
+.timeline-row:nth-child(1) > p{
+  animation-duration: 1s;
+}
+
+@keyframes caption-right{
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+    transform: translate3d(10px, 0px, 0px);
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 .timeline-left{
   height: 100%;
   width: 45%;
@@ -348,6 +368,24 @@ nav > .container-fluid{
 .timeline-level{
   margin-top: 10px;
   margin-bottom: 10px;
+  animation: timeline-level 1s ease-in-out;
+}
+
+.timeline-level:nth-child(6){
+  animation-duration: 1.4s;
+}
+
+@keyframes timeline-level{
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+    transform: translate3d(-5px,0px,0px);
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .timeline-milestone{
