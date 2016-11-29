@@ -184,7 +184,7 @@ nav > .container-fluid{
 
 #main{
   padding-top: 100px;
-  background-color: #fafafa;
+  background-color: #f2f2f2;
 }
 
 #hello{
@@ -195,7 +195,7 @@ nav > .container-fluid{
   height: 600px;
   position: relative;
   background-color: #fff;
-  box-shadow: 1px 1px 15px rgba(0,0,0,.4);
+  box-shadow: 1px 1px 5px rgba(0,0,0,.4);
   animation-name: paper-slide;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
@@ -338,14 +338,49 @@ nav > .container-fluid{
 }
 
 #project-teasers{
-  height: 400px;
+  height: 600px;
   width: 100%;
   position: relative;
   background-color: #ddd;
-  /*box-shadow: inset 0px 2px 7px -3px rgba(0,0,0,.4);*/
+  box-shadow: 0px -2px 7px rgba(0,0,0,.4);
   opacity: 1;
   z-index: 2;
 }
+
+#projects-wrapper{
+  height: 100%;
+  width: 70%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#projects-wrapper > .row{
+  height: 300px;
+  width: 100%;
+  margin: 0;
+}
+
+#projects-wrapper > .row > .col-md-6{
+  height: 100%;
+  padding: 0;
+}
+
+#projects-wrapper > .row:nth-child(1) > .col-md-6:nth-child(1){
+  background-color: #ccc;
+}
+
+#projects-wrapper > .row:nth-child(1) > .col-md-6:nth-child(2){
+  background-color: #bbb;
+}
+
+#projects-wrapper > .row:nth-child(2) > .col-md-6:nth-child(1){
+  background-color: #aaa;
+}
+
+#projects-wrapper > .row:nth-child(2) > .col-md-6:nth-child(2){
+  background-color: #999;
+}
+
 
 #player-card{
   margin: 0 auto;
