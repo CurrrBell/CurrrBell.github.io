@@ -1,6 +1,138 @@
 nav{
-  box-shadow: 0px 10px 10px rgba(0,0,0,.1);
+  box-shadow: 0px 1px 10px rgba(0,0,0,.1);
 }
+
+/*begin custom nav style*/
+
+#top-nav{
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px rgba(0,0,0,.1);
+  z-index: 1000;
+}
+
+.nav-scrolled{
+  animation-name: nav-shadow-scroll;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes nav-shadow-scroll{
+  0%{
+    height: 100px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,.1);
+  }
+  100%{
+    height: 60px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,.1);
+  }
+}
+
+#nav-bar {
+  /*position: relative;*/
+  height: 100%;
+  width: 720px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  font: 20px Helvetica, sans-serif;
+}
+
+#nav-bar > li{
+  float: left;
+  padding: 40px;
+  padding-top: 37px;
+  padding-bottom: 36px;
+}
+
+#nav-bar > li > a,
+#nav-bar > li > a:focus{
+  color: #aaa;
+}
+
+#nav-bar > li > a:hover,
+#nav-bar > li > a:active,
+#nav-bar > li > a:link{
+  text-decoration: none;
+  color: #888;
+}
+
+#nav-bar > .active{
+  border-bottom: 4px solid #ff5722;
+}
+
+#nav-bar > .active > a{
+  color: #ff5722;
+}
+
+.nav-scrolled > #nav-bar{
+  animation-name: nav-bar-scroll;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes nav-bar-scroll{
+  0%{
+    width: 720px;
+  }
+  100%{
+    width: 530px;
+  }
+}
+
+.nav-scrolled > #nav-bar > li{
+  animation-name: nav-item-scroll;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes nav-item-scroll{
+  0%{
+    padding: 40px;
+    padding-top: 37px;
+    padding-bottom: 36px;
+  }
+  100%{
+    padding: 20px;
+    padding-top: 17px;
+    padding-bottom: 16px;
+  }
+}
+
+#nav-bar > #nav-logo{
+  width: 120px;
+  padding: 20px;
+  padding-top: 24px;
+  padding-bottom: 23px;
+}
+
+.nav-scrolled > #nav-bar > #nav-logo{
+  animation-name: nav-logo-scroll;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes nav-logo-scroll{
+  0%{
+    width: 120px;
+    padding-top: 24px;
+    padding-bottom: 23px;
+  }
+  100%{
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/*end custom nav style*/
 
 nav > .container-fluid{
   padding-left: 20%;
@@ -11,6 +143,7 @@ nav > .container-fluid{
   padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-left: 0 !important;
   margin-right: 20px;
 }
 
@@ -19,7 +152,16 @@ nav > .container-fluid{
 }
 
 .navbar-nav{
-  /*padding-left: 5%;*/
+  height: 100%;
+}
+
+.navbar-nav > li {
+  height: 100%;
+}
+
+.navbar-nav > li > a{
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .navbar-default{
@@ -34,6 +176,10 @@ nav > .container-fluid{
 
 .navbar-default .navbar-nav > .active > a:hover{
   background-color: #fff;
+}
+
+.navbar-collapse{
+  height: 100px;
 }
 
 .main{
@@ -481,8 +627,14 @@ footer > .row > .col-lg-2{
   color: #aaa;
 }
 
+.footer-link:focus{
+  color: #aaa;
+  text-decoration: none;
+}
+
 .footer-link:hover,
-.footer-link:active{
+.footer-link:active,
+.footer-link:link{
   text-decoration: none;
   color: #888;
 }
