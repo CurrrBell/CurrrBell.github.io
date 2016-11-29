@@ -190,24 +190,23 @@ nav > .container-fluid{
 #hello{
   margin: 0 auto;
   margin-top: 100px;
-  width:70%;
-  height: 400px;
+  width: 90%;
+  max-width: 1000px;
+  height: 600px;
   position: relative;
   background-color: #fff;
-  box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+  box-shadow: 1px 1px 15px rgba(0,0,0,.4);
   animation-name: paper-slide;
-  animation-duration: 1.0s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   z-index: 1;
 }
 
 @keyframes paper-slide{
   0%{
-    opacity: 0;
-    transform: translate3d(0px,500px,0px);
+    transform: translate3d(0px,600px,0px);
   }
   100%{
-    opacity: 1;
   }
 }
 
@@ -215,8 +214,8 @@ nav > .container-fluid{
   font-family: 'Courgette', cursive;
   color: #000;
   font-size: 100px;
-  padding-left: 50px;
-  padding-top: 50px;
+  padding-left: 100px;
+  padding-top: 70px;
   animation-name: fadeslide;
   animation-duration: 2.5s;
   animation-timing-function: ease-out;
@@ -244,7 +243,8 @@ nav > .container-fluid{
   /*opacity: 0;*/
   font-size: 50px;
   font-family: 'Lato', sans-serif;
-  padding-left: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
   animation-name: hellofade;
   animation-duration: 3.5s;
   animation-timing-function: ease-out;
@@ -267,12 +267,82 @@ nav > .container-fluid{
   }
 }
 
+#scroll-me{
+  position: relative;
+  top: 90px;
+  animation-name: scroll-fade-in;
+  animation-duration: 4.0s;
+}
+
+@keyframes scroll-fade-in{
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+#scroll-me.scroll-hidden{
+  opacity: 1;
+  animation-name: scroll-fade-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scroll-fade-out {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.paper-dot{
+  color: #ff5722;
+  display: block;
+  width: 6px;
+  height: 25px;
+  margin: 0 auto;
+  animation-name: dot-bump;
+  animation-duration: 1.1s;
+  animation-iteration-count: infinite;
+  /*animation-timing-function: ease-in-out;*/
+}
+
+.paper-dot:nth-child(1){
+  animation-delay: 0s
+}
+
+.paper-dot:nth-child(2){
+  animation-delay: 0.1s
+}
+.paper-dot:nth-child(3){
+  animation-delay: 0.2s
+}
+
+@keyframes dot-bump{
+  0%{
+    width: 6px;
+  }
+  15%{
+    width: 11px;
+  }
+  30%{
+    width: 6px;
+  }
+}
+
 #project-teasers{
   height: 400px;
   width: 100%;
   position: relative;
   background-color: #ddd;
-  box-shadow: inset 0px 2px 7px -3px rgba(0,0,0,.4);
+  /*box-shadow: inset 0px 2px 7px -3px rgba(0,0,0,.4);*/
   opacity: 1;
   z-index: 2;
 }
@@ -575,7 +645,7 @@ nav > .container-fluid{
 }
 
 .timeline-dot{
-  color: #ff5722;
+  /*color: #ff5722;*/
   display: block;
   width: 5px;
   height: 25px;
