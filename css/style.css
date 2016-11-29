@@ -302,7 +302,7 @@ nav > .container-fluid{
   }
 }
 
-.paper-dot{
+#scroll-me .paper-dot{
   color: #ff5722;
   display: block;
   width: 6px;
@@ -314,14 +314,14 @@ nav > .container-fluid{
   /*animation-timing-function: ease-in-out;*/
 }
 
-.paper-dot:nth-child(1){
+#scroll-me .paper-dot:nth-child(1){
   animation-delay: 0s
 }
 
-.paper-dot:nth-child(2){
+#scroll-me .paper-dot:nth-child(2){
   animation-delay: 0.1s
 }
-.paper-dot:nth-child(3){
+#scroll-me .paper-dot:nth-child(3){
   animation-delay: 0.2s
 }
 
