@@ -271,7 +271,7 @@ nav > .container-fluid{
   position: relative;
   top: 90px;
   animation-name: scroll-fade-in;
-  animation-duration: 4.0s;
+  animation-duration: 6s;
 }
 
 @keyframes scroll-fade-in{
