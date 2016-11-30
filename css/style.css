@@ -52,6 +52,7 @@ nav{
 
 #nav-bar > li > a,
 #nav-bar > li > a:focus{
+  text-decoration: none;
   color: #aaa;
 }
 
@@ -65,7 +66,10 @@ nav{
   border-bottom: 4px solid #ff5722;
 }
 
-#nav-bar > .active > a{
+#nav-bar > .active > a,
+#nav-bar > .active > a:focus,
+#nav-bar > .active > a:hover,
+#nav-bar > .active > a:active{
   color: #ff5722;
 }
 
