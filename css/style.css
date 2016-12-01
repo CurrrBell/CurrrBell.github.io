@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "bignoodletoo";
+    src: url("bignoodletoo.woff") format('woff');
+}
+
 nav{
   box-shadow: 0px 1px 10px rgba(0,0,0,.1);
 }
@@ -342,7 +347,7 @@ nav > .container-fluid{
 }
 
 #project-teasers{
-  height: 600px;
+  height: 800px;
   width: 100%;
   position: relative;
   background-color: #ddd;
@@ -354,11 +359,12 @@ nav > .container-fluid{
 #projects-wrapper{
   height: 100%;
   width: 70%;
+  min-width: 1000px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-#projects-wrapper > .row{
+/*#projects-wrapper > .row{
   height: 300px;
   width: 100%;
   margin: 0;
@@ -383,6 +389,77 @@ nav > .container-fluid{
 
 #projects-wrapper > .row:nth-child(2) > .col-md-6:nth-child(2){
   background-color: #999;
+}*/
+
+#projects-wrapper > div{
+  height: 400px;
+}
+
+#projects-wrapper > div > div > .project-display{
+  max-height: 400px;
+  display: inline-block;
+  float: left;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: 0 auto;
+}
+
+#project-1{
+  background-color: #ccc;
+}
+
+#project-1:hover + #project-1-overlay{
+  height: 400px;
+  transition: height .5s;
+}
+
+#project-1-wrapper{
+  height: 100%;
+  width: 810px;
+  display: block;
+  margin: 0 auto;
+}
+
+#project-1 > #project-1-wrapper > .project-display:nth-child(1){
+  max-width: 600px;
+  margin-right: 50px;
+}
+
+#project-1 > #project-1-wrapper > .project-display:nth-child(2){
+  max-width: 160px
+}
+
+#projects-wrapper > #project-1-overlay{
+  position: absolute;
+  bottom: 400px;
+  height: 0px;
+  width: 70%;
+  min-width: 1000px;
+  max-width: 1400px;
+  background-color: rgba(0,0,0,.7);
+  font-family: 'bignoodletoo', sans-serif;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  transition: height .5s;
+}
+
+#projects-wrapper > #project-1-overlay:hover{
+  height: 400px;
+}
+
+#projects-wrapper > #project-1-overlay > h1{
+  font-size: 60px;
+  margin-top: 140px;
+}
+
+#project-2{
+  background-color: #bbb;
+  position: relative;
+  z-index: 3;
+}
+
+#project-2 > p {
 }
 
 
