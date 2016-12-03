@@ -7,8 +7,6 @@ nav{
   box-shadow: 0px 1px 10px rgba(0,0,0,.1);
 }
 
-/*begin custom nav style*/
-
 #top-nav{
   height: 100px;
   width: 100%;
@@ -139,56 +137,6 @@ nav{
     padding-top: 10px;
     padding-bottom: 10px;
   }
-}
-
-/*end custom nav style*/
-
-nav > .container-fluid{
-  padding-left: 20%;
-  padding-top: 4px;
-}
-
-.navbar-brand{
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 0 !important;
-  margin-right: 20px;
-}
-
-.navbar{
-  border: none;
-}
-
-.navbar-nav{
-  height: 100%;
-}
-
-.navbar-nav > li {
-  height: 100%;
-}
-
-.navbar-nav > li > a{
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.navbar-default{
-  background-color: #fff;
-}
-
-.navbar-default .navbar-nav > .active > a{
-  background-color: #fff;
-  color: #ff5722;
-  border-bottom: 4px solid #ff5722;
-}
-
-.navbar-default .navbar-nav > .active > a:hover{
-  background-color: #fff;
-}
-
-.navbar-collapse{
-  height: 100px;
 }
 
 #main{
@@ -364,33 +312,6 @@ nav > .container-fluid{
   margin: 0 auto;
 }
 
-/*#projects-wrapper > .row{
-  height: 300px;
-  width: 100%;
-  margin: 0;
-}
-
-#projects-wrapper > .row > .col-md-6{
-  height: 100%;
-  padding: 0;
-}
-
-#projects-wrapper > .row:nth-child(1) > .col-md-6:nth-child(1){
-  background-color: #ccc;
-}
-
-#projects-wrapper > .row:nth-child(1) > .col-md-6:nth-child(2){
-  background-color: #bbb;
-}
-
-#projects-wrapper > .row:nth-child(2) > .col-md-6:nth-child(1){
-  background-color: #aaa;
-}
-
-#projects-wrapper > .row:nth-child(2) > .col-md-6:nth-child(2){
-  background-color: #999;
-}*/
-
 #projects-wrapper > div{
   height: 400px;
 }
@@ -408,7 +329,12 @@ nav > .container-fluid{
   background-color: #ccc;
 }
 
-#project-1:hover + #project-1-overlay{
+#project-1:hover + .project-overlay{
+  height: 400px;
+  transition: height .5s;
+}
+
+#project-2:hover + .project-overlay{
   height: 400px;
   transition: height .5s;
 }
@@ -429,7 +355,7 @@ nav > .container-fluid{
   max-width: 160px
 }
 
-#projects-wrapper > #project-1-overlay{
+#projects-wrapper > .project-overlay{
   position: absolute;
   bottom: 400px;
   height: 0px;
@@ -444,11 +370,11 @@ nav > .container-fluid{
   transition: height .5s;
 }
 
-#projects-wrapper > #project-1-overlay:hover{
+#projects-wrapper > .project-overlay:hover{
   height: 400px;
 }
 
-#projects-wrapper > #project-1-overlay > h1{
+#projects-wrapper > .project-overlay > h1{
   font-size: 60px;
   margin-top: 140px;
 }
@@ -457,226 +383,27 @@ nav > .container-fluid{
   background-color: #bbb;
   position: relative;
   z-index: 3;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../images/phone_shot.png);
 }
 
 #project-2 > p {
-}
-
-
-#player-card{
-  margin: 0 auto;
-  padding-top: 30px;
-  width: 70%;
-  height: 400px;
-  /*background-color: #eee;*/
-  font-family: 'Share Tech Mono', monospace;
-}
-
-.row{
-  height: 100%;
-  margin: 0;
-}
-
-.col-md-5 > h2{
-  text-align: center;
-}
-
-.col-md-5 > hr{
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.progress{
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 2px;
-  height: 5px;
-}
-
-.progress-bar{
-  background-color: #ff5722;
-}
-
-.next-level{
-  position: absolute;
-  right: .8vw;
-}
-
-#avatar{
-  padding-left: 10px;
-  padding-right: 10px;
-  /*background-color: #aaa;*/
-  height:100%;
-  /*text-align: center;*/
-  font-size: .8vw;
-}
-
-#avatar > img{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,.4);
-  animation: avatarfade 3.8s ease-in-out;
-}
-
-@keyframes avatarfade {
-  0%{
-    opacity: 0;
-  }
-  80%{
-    opacity: 0;
-    transform: translate3d(-20px,0px,0px);
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-#avatar-info{
-  animation: avatar-content 4s ease-in-out;
-}
-
-@keyframes avatar-content{
-  0%{
-    opacity: 0;
-  }
-  80%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-#avatar > hr{
-  margin: 10px;
-  margin-top: 15px;
-}
-
-#avatar > span{
-  width: 100%;
-  white-space: nowrap;
 
 }
 
-#skills{
-  /*background-color: #bbb;*/
-  height:100%;
-}
-
-#skills > h2{
-  animation: card-title 4s ease-in-out;
-}
-
-#achievements > h2{
-  animation: card-title 4.2s ease-in-out;
-}
-
-#skills > hr{
-  animation: card-hr 4s ease-in-out;
-}
-
-#achievements > hr{
-  animation: card-hr 4s ease-in-out;
-}
-
-@keyframes card-hr{
-  0%{
-    opacity: 0;
-  }
-  80%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-#skills-content{
-  animation: card-content 4s ease-in-out;
-}
-
-#achievements-content{
-  animation: card-content 4s ease-in-out;
-}
-
-@keyframes card-title{
-  0%{
-    opacity: 0;
-  }
-  80%{
-    opacity: 0;
-    transform: translate3d(0px,-5px,0px);
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-@keyframes card-content {
-  0%{
-    opacity: 0;
-  }
-  85%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-#achievements{
-  /*background-color: #ccc;*/
-  height:100%;
-}
-
-#achievements-content > .row{
-  height: 100px;
-  margin-bottom: 10px;
-}
-
-.row > .col-sm-3 {
-  height: 100%;
-  padding: 0;
-  background-color: #eee;
-}
-
-.achievement-contents{
-  margin:5px;
-  margin-bottom: 0;
-  background: #fff;
-  height: calc(100% - 5px);
-  width: calc(100% - 10px);
-}
-
-.achievement-icon{
-  height: 65%;
-}
-
-.achievement-icon > img{
-  height: 100%;
-  margin: 0 auto;
-  padding: 6%;
-}
-
-.achievement-score{
-  height: 35%;
-  background-color: #eee;
-}
-
-.score{
-  margin: 0 auto;
-  height: 100%;
-}
-
-.score > span{
-  position: absolute;
-  bottom: 8px;
-  left: calc(50% - 8px);
+#project-2 + .project-overlay{
+  bottom: 0;
+  z-index: 4;
 }
 
 #timeline-section-1{
   width: 100%;
   height: 400px;
+  position: relative;
+  display: block;
+  z-index: 5;
+  background-color: #fff;
 }
 
 .timeline-row{
