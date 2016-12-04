@@ -1,10 +1,49 @@
 #paper{
   margin: 0 auto;
   margin-top: 100px;
+  padding: 100px;
   width: 90%;
   max-width: 1000px;
   height: 1300px;
   position: relative;
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+}
+
+h1{
+  margin-top: 0;
+  color: #000;
+}
+
+h2{
+  margin-bottom: 15px;
+  color: #000;
+}
+
+h3{
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+h4{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#resume-header{
+  text-align: center;
+}
+
+.experience-item{
+  margin-bottom: 20px;
+}
+
+#resume-education > h3,
+.experience-item > h3 {
+  display: inline;
+}
+
+.date{
+  display: inline;
+  float: right;
 }
