@@ -39,7 +39,7 @@ nav{
 #nav-bar {
   /*position: relative;*/
   height: 100%;
-  width: 720px;
+  width: 750px;
   list-style: none;
   padding: 0;
   margin: 0 auto;
@@ -138,6 +138,8 @@ nav{
     padding-bottom: 10px;
   }
 }
+
+
 
 #main{
   padding-top: 100px;

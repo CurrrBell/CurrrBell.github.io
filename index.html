@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
   <!-- Google Analytics -->
   <script>
@@ -30,7 +31,16 @@
       <li><a href="#">Projects</a></li>
       <li id="nav-logo"><img src="images/logo-no-underline.svg"></li>
       <li><a href="resume.html">Résumé</a></li>
-      <li><a href="#">Contact</a></li>
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Dropdown <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li>twitter</li>
+          <li>twitter</li>
+          <li>twitter</li>
+        </ul>
+      </li>
     </ul>
   </nav>
   <div id="main">
