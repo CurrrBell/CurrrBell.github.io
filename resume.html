@@ -10,6 +10,16 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/script.js"></script>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicon/manifest.json">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
   <!-- Google Analytics -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -31,7 +41,16 @@
       <li><a href="#">Projects</a></li>
       <li id="nav-logo"><img src="images/logo-no-underline.svg"></li>
       <li class="active"><a href="#">Résumé</a></li>
-      <li><a href="#">Contact</a></li>
+      <li id="contact" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Contact</a>
+        <ul class="dropdown-menu">
+          <li><a href="mailto:chrislbellny@gmail.com?subject=Opportunity%20for%20a%20handsome%20developer%20such%20as%20yourself" target="_blank"><img src="images/icons/email.png">email</a></li>
+          <li><a href="https://www.linkedin.com/in/CurrrBell" target="_blank"><img src="images/icons/linkedin.png">/in/CurrrBell</a></li>
+          <li><a href="https://github.com/CurrrBell" target="_blank"><img src="images/icons/github.png">/CurrrBell</a></li>
+          <li><a href="https://www.hackerrank.com/CurrrBell" target="_blank"><img src="images/icons/hackerrank.png">@CurrrBell</a></li>
+          <li><a href="https://twitter.com/CurrrBell" target="_blank"><img src="images/icons/twitter.png">@CurrrBell</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
   <div id="main">
@@ -108,30 +127,9 @@
         </div>
       </div>
     </div>
-    <footer>
-      <div class="row">
-        <div class="col-lg-2">
-          <a class="footer-link" href="#">HOME</a>
-        </div>
-        <div class="col-lg-2">
-          <a class="footer-link" href="#">PROJECTS</a>
-        </div>
-        <div class="col-lg-2">
-          <object id="footer-logo" type="image/svg+xml" data="images/logo.svg">
-            Your browser does not support SVG
-          </object>
-        </div>
-        <div class="col-lg-2">
-          <a class="footer-link" href="#">RÉSUMÉ</a>
-        </div>
-        <div class="col-lg-2">
-          <a class="footer-link" href="#">CONTACT</a>
-        </div>
-      </div>
-      <div id="copy">
-        <span>&copy; 2016 Chris Bell - All rights reserved</span>
-      </div>
-    </footer>
+    <div id="copy">
+      <span>&copy; 2016 Chris Bell - All rights reserved</span>
+    </div>
   </div>
 </body>
 </html>
