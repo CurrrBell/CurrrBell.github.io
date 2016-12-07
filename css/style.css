@@ -14,7 +14,7 @@ nav{
   top: 0;
   background-color: #fff;
   border-bottom: 2px solid rgba(0,0,0,.1);
-  z-index: 1000;
+  z-index: 999;
 }
 
 .nav-scrolled{
@@ -139,7 +139,32 @@ nav{
   }
 }
 
+#nav-bar > #contact >a:focus{
+  color: #888;
+}
 
+.dropdown-menu{
+  width: 100%;
+  top: 60%;
+  border: none;
+  box-shadow: 0 3px 9px 3px rgba(0,0,0,.175);
+  padding-bottom: 0;
+}
+
+.dropdown-menu > li {
+  margin-bottom: 5px;
+}
+
+.dropdown-menu > li > a{
+  padding-right: 0;
+  padding-left: 10px;
+  color: #888;
+}
+
+.dropdown-menu > li > a > img{
+  width: 24px;
+  margin-right: 10px;
+}
 
 #main{
   padding-top: 100px;
@@ -544,56 +569,11 @@ nav{
   height: 32px;
 }
 
-footer{
-  height: 300px;
-  width: 100%;
-}
-
-footer > .row{
-  height: 250px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-footer > .row > .col-lg-2{
-  width: 20%;
-}
-
-#footer-logo{
-  margin: 10px;
-  margin-top: 70px;
-}
-
-#Underline{
-  fill: azure;
-}
-
-.footer-link{
-  display: block;
-  width: auto;
-  margin: 0 auto;
-  margin-top: 110px;
-  text-align: center;
-  font: 20px Helvetica, sans-serif;
-  color: #aaa;
-}
-
-.footer-link:focus{
-  color: #aaa;
-  text-decoration: none;
-}
-
-.footer-link:hover,
-.footer-link:active{
-  text-decoration: none;
-  color: #888;
-}
-
 #copy{
   height: 50px;
   padding-top:15px;
   text-align: center;
-  color: #eee;
+  color: #ccc;
   box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
 
