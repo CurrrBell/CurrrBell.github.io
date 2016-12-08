@@ -181,12 +181,12 @@ nav{
   animation-name: paper-slide;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
+  background-color: #fff;
 }
 
 #hello{
   height: 600px;
   position: relative;
-  background-color: #fff;
 }
 
 @keyframes paper-slide{
@@ -408,6 +408,11 @@ nav{
   transition: height .5s;
 }
 
+#project-3:hover + .project-overlay{
+  height: 400px;
+  transition: height .5s;
+}
+
 #project-1-wrapper{
   height: 100%;
   width: 810px;
@@ -426,7 +431,6 @@ nav{
 
 #projects-wrapper > .project-overlay{
   position: absolute;
-  bottom: 400px;
   height: 0px;
   width: 100%;
   background-color: rgba(0,0,0,.7);
@@ -446,6 +450,10 @@ nav{
   margin-top: 140px;
 }
 
+#project-1 + .project-overlay{
+  bottom: 800px;
+}
+
 #project-2{
   position: relative;
   background-repeat: no-repeat;
@@ -459,11 +467,12 @@ nav{
 }
 
 #project-2 + .project-overlay{
-  bottom: 0;
+  bottom: 400px;
   z-index: 3;
 }
 
 #project-3{
+  position: relative;
   z-index: 4;
 }
 
