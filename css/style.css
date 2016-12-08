@@ -357,7 +357,7 @@ nav{
   opacity: 1;
   /*z-index: 2;*/
   animation-name: projects-fade-in;
-  animation-duration: 8s;
+  animation-duration: 7.2s;
 }
 
 @keyframes projects-fade-in{
@@ -481,12 +481,32 @@ nav{
   z-index: 5;
 }
 
+#project-3-wrapper{
+  height: 100%;
+  width: 670px;
+  display: block;
+  margin: 0 auto;
+}
+
 #timeline-section-1{
   width: 100%;
-  height: 400px;
+  height: 500px;
+  padding-top: 50px;
   position: relative;
   display: block;
   background-color: #fff;
+  z-index: 6;
+}
+
+#timeline-section-1 > h1{
+  color: #000;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  animation-name: project-header-fade-in;
+  animation-duration: 8s;
 }
 
 .timeline-row{
