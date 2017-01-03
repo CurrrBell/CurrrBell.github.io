@@ -381,21 +381,33 @@ nav{
   margin: 0 auto;
 }
 
-#projects-wrapper > div{
+#projects-wrapper > .row{
   height: 400px;
+  margin:0;
+  z-index: 1;
+  position: relative;
 }
 
-#projects-wrapper > div > div > .project-display{
+#projects-wrapper > .row:nth-child(2){
+  z-index: 3;
+}
+
+.row > .col-sm-6{
+  height: 100%;
+  padding: 0;
+}
+
+.row > .col-sm-6 > div{
+  height: 100%;
+}
+
+.col-sm-6 > div > .project-display{
   max-height: 400px;
+  max-width: 100%;
   display: inline-block;
   float: left;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px;
   margin: 0 auto;
-}
-
-#project-1{
-  /*background-color: #ccc;*/
 }
 
 #project-1:hover + .project-overlay{
@@ -413,7 +425,12 @@ nav{
   transition: height .5s;
 }
 
-#project-1-wrapper{
+#project-4:hover + .project-overlay{
+  height: 400px;
+  transition: height .5s;
+}
+
+/*#project-1-wrapper{
   height: 100%;
   width: 810px;
   display: block;
@@ -427,9 +444,9 @@ nav{
 
 #project-1 > #project-1-wrapper > .project-display:nth-child(2){
   max-width: 160px
-}
+}*/
 
-#projects-wrapper > .project-overlay{
+.row > .col-sm-6 > .project-overlay{
   position: absolute;
   height: 0px;
   width: 100%;
@@ -441,20 +458,64 @@ nav{
   transition: height .5s;
 }
 
-#projects-wrapper > .project-overlay:hover{
+.col-sm-6 > .project-overlay:hover{
   height: 400px;
 }
 
-#projects-wrapper > .project-overlay > h1{
-  font-size: 60px;
-  margin-top: 140px;
+.col-sm-6 > .project-overlay > h1{
+  font-size: 56px;
+  margin-top: 160px;
+}
+
+.col-sm-6 > .project-overlay > h1 > a,
+.col-sm-6 > .project-overlay > h1 > a:focus{
+  text-decoration: none;
+  color: #fff;
+}
+
+.col-sm-6 > .project-overlay > h1 > a:hover,
+.col-sm-6 > .project-overlay > h1 > a:active{
+  text-decoration: none;
+  color: #aaa;
+}
+
+.col-sm-6 > .project-overlay > h2 > a,
+.col-sm-6 > .project-overlay > h2 > a:focus{
+  text-decoration: none;
+  color: #fff;
+}
+
+.col-sm-6 > .project-overlay > h2 > a:hover,
+.col-sm-6 > .project-overlay > h2 > a:active{
+  text-decoration: none;
+  color: #aaa;
+}
+
+.col-sm-6 > .project-overlay > h1 > a > .glyphicon{
+  font-size: 40px;
+  margin-left: 20px;
 }
 
 #project-1 + .project-overlay{
-  bottom: 800px;
+  bottom: 0px;
 }
 
 #project-2{
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(../images/automatrumpscreen.JPG);
+  z-index: 2;
+}
+
+#project-2 + .project-overlay{
+  bottom: 0px;
+  z-index: 3;
+}
+
+
+#project-3{
   position: relative;
   background-repeat: no-repeat;
   background-position: center center;
@@ -462,30 +523,20 @@ nav{
   z-index: 2;
 }
 
-#project-2 > p {
 
-}
-
-#project-2 + .project-overlay{
-  bottom: 400px;
+#project-3 + .project-overlay{
+  bottom: 0px;
   z-index: 3;
 }
 
-#project-3{
+#project-4{
   position: relative;
   z-index: 4;
 }
 
-#project-3 + .project-overlay{
+#project-4 + .project-overlay{
   bottom: 0;
   z-index: 5;
-}
-
-#project-3-wrapper{
-  height: 100%;
-  width: 670px;
-  display: block;
-  margin: 0 auto;
 }
 
 #timeline-section-1{
