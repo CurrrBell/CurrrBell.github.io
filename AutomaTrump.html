@@ -65,7 +65,7 @@
     </div>
     <div id="details">
       <div id="overview">
-        <p>Automa-Trump is a twitter bot that procedurally generates Trump-like tweets using <a href="https://en.wikipedia.org/wiki/Markov_chain" target="_blank">Markov chains</a>. He currently lives and operates in a Raspberry Pi that sits <a href="https://www.instagram.com/p/BO0xmULBwGq/" target="_blank">on my desk</a>, tweeting once every 6-24 hours. The Python source code can be found <a href="https://github.com/CurrrBell/AutomaTrump" target="_blank">here</a>.</p>
+        <p>Automa-Trump is a twitter bot that procedurally generates Trump-like tweets using <a href="https://en.wikipedia.org/wiki/Markov_chain" target="_blank">Markov chains</a>. He currently lives and operates in a Raspberry Pi that <a href="https://www.instagram.com/p/BO0xmULBwGq/" target="_blank">sits on my desk</a>, tweeting once every 6-24 hours. The Python source code can be found <a href="https://github.com/CurrrBell/AutomaTrump" target="_blank">here</a>.</p>
       </div>
       <div id="explanation">
         <h1>But why?</h1>
@@ -85,23 +85,28 @@
         </div>
         <p>To construct a Markov chain using these, we iterate through each word in each tweet. For each, we store a list of words that come immediately after</p>
         <div class="code-block">
-          <code>          wordsInTweet = re.findall(r"[@a-zA-Z0-9'-]+|[.,!?;:]", tweet)
-          <span class="keyword">if</span>(wordsInTweet[0] == "."): <span class="comment">#tweets starting with "." tend to just be bad</span>
-              tweetStarts.append(wordsInTweet[1])
-          <span class="keyword">else</span>:
-              tweetStarts.append(wordsInTweet[0])
-          <span class="keyword">for</span> i <span class="keyword">in</span> range(len(wordsInTweet)):
-              thisWord = wordsInTweet[i]
-              nextWord = "EOF" <span class="comment">#keep track of words that were at the end of tweets</span>
-              <span class="keyword">if</span>(i < len(wordsInTweet) - 1): <span class="comment">#if we're not actually at the end of the tweet</span>
-                  nextWord = wordsInTweet[i+1]
-              <span class="keyword">if</span>(thisWord <span class="keyword">in</span> wordCount.keys()):
-                  wordCount[thisWord].append(nextWord)
-              <span class="keyword">else</span>:
-                  wordCount[thisWord] = [nextWord]
-              <span class="keyword">if</span>(nextWord == "EOF"):
-                  <span class="keyword">break</span>
-          </code>
+        <code>
+        wordsInTweet = re.findall(r"[@a-zA-Z0-9'-]+|[.,!?;:]", tweet)
+
+        <span class="keyword">if</span>(wordsInTweet[0] == "."): <span class="comment">#tweets starting with "." tend to just be bad</span>
+            tweetStarts.append(wordsInTweet[1])
+        <span class="keyword">else</span>:
+            tweetStarts.append(wordsInTweet[0])
+
+        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(wordsInTweet)):
+            thisWord = wordsInTweet[i]
+            nextWord = "EOF" <span class="comment">#keep track of words that were at the end of tweets</span>
+
+            <span class="keyword">if</span>(i < len(wordsInTweet) - 1): <span class="comment">#if we're not actually at the end of the tweet</span>
+                nextWord = wordsInTweet[i+1]
+            <span class="keyword">if</span>(thisWord <span class="keyword">in</span> wordCount.keys()):
+                wordCount[thisWord].append(nextWord)
+            <span class="keyword">else</span>:
+                wordCount[thisWord] = [nextWord]
+
+            <span class="keyword">if</span>(nextWord == "EOF"):
+                <span class="keyword">break</span>
+        </code>
         </div>
         <p>Thus, we are building an unweighted directed graph with each vertex corresponding to a word. In this case, <span class="snippet">wordCount</span> acts as the adjacency list of our word graph. Most words only have one word that ever appears after them. Some, however, have more than one</p>
         <ul>
@@ -117,28 +122,28 @@
         </ul>
         <p>We will soon see that this is very important. Now that we have our graph built, we can use it to synthesize a new tweet</p>
         <div class="code-block">
-          <code>
-          newTweet = ""
-          tweetStart = tweetStarts[random.randrange(0,len(tweetStarts))]
-          currentWord = tweetStart
+        <code>
+        newTweet = ""
+        tweetStart = tweetStarts[random.randrange(0,len(tweetStarts))]
+        currentWord = tweetStart
 
-          <span class="keyword">while</span>(len(wordCount[currentWord]) > 0 <span class="keyword">and</span> (len(newTweet) + len(currentWord)) < 140):
-              nextWord = wordCount[currentWord][random.randrange(0, len(wordCount[currentWord]))]
+        <span class="keyword">while</span>(len(wordCount[currentWord]) > 0 <span class="keyword">and</span> (len(newTweet) + len(currentWord)) < 140):
+            nextWord = wordCount[currentWord][random.randrange(0, len(wordCount[currentWord]))]
 
-              <span class="keyword">if</span>(currentWord <span class="keyword">in</span> string.punctuation):
-                  newTweet += currentWord
-              <span class="keyword">else</span>:
-                  newTweet += " " + currentWord
+            <span class="keyword">if</span>(currentWord <span class="keyword">in</span> string.punctuation):
+                newTweet += currentWord
+            <span class="keyword">else</span>:
+                newTweet += " " + currentWord
 
-              <span class="keyword">if</span>(nextWord == "EOF"):
-                  break
+            <span class="keyword">if</span>(nextWord == "EOF"):
+                break
 
-              currentWord = nextWord
+            currentWord = nextWord
 
-          <span class="comment">#we have our tweet, let's post it</span>
+        <span class="comment">#we have our tweet, let's post it</span>
 
-          twitter.update_status(status=newTweet)
-          </code>
+        twitter.update_status(status=newTweet)
+        </code>
         </div>
         <p>We first choose a word. Then, to choose the next word, we choose a random member of the initial word's list of neighbor words. For example, if we choose to start our tweet with "The", we randomly choose between "Green", "final", and "Dems" for our next word. We repeat this until there are either no words to choose from or we hit the 140 character limit. One possible result is:</p>
         <blockquote>The Dems and Green Party just picked up an additional 131 votes. Just a Stein Scam to raise money!</blockquote>

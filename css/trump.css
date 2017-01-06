@@ -45,12 +45,13 @@ h3{
 
 #details{
   width: 90%;
-  max-width: 1200px;
+  max-width: 900px;
   background: #fff;
   margin: 0 auto;
-  padding: 100px;
+  padding: 120px;
   font-size: 24px;
   font-family: 'Lato', sans-serif;
+  border: 1px solid #e1e8ed;
 }
 
 #overview{
@@ -144,6 +145,8 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
   margin-top: 50px;
   margin-bottom: 50px;
   line-height: 28px;
+  margin-left: -120px;
+  margin-right: -120px;
 }
 
 code{
@@ -172,4 +175,6 @@ code > .keyword{
 .diagram{
   margin: 0 auto;
   display: block;
+  width: 90%;
+  max-width: 500px;
 }
