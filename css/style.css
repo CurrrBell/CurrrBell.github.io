@@ -3,7 +3,12 @@
     src: url("bignoodletoo.woff") format('woff');
 }
 
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
 nav{
+  font: inherit;
   box-shadow: 0px 1px 10px rgba(0,0,0,.1);
 }
 
@@ -39,7 +44,7 @@ nav{
 #nav-bar {
   /*position: relative;*/
   height: 100%;
-  width: 720px;
+  width: 730px;
   list-style: none;
   padding: 0;
   margin: 0 auto;
@@ -85,10 +90,10 @@ nav{
 
 @keyframes nav-bar-scroll{
   0%{
-    width: 720px;
+    width: 730px;
   }
   100%{
-    width: 530px;
+    width: 550px;
   }
 }
 
@@ -139,16 +144,57 @@ nav{
   }
 }
 
+.nav-scrolled > #nav-bar > #contact > .dropdown-menu:before,
+.nav-scrolled > #nav-bar > #contact > .dropdown-menu:after
+{
+  animation-name: nav-dropdown-scroll;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes nav-dropdown-scroll{
+  0%{
+
+  }
+  100%{
+    left: 60%;
+  }
+}
+
 #nav-bar > #contact >a:focus{
   color: #888;
 }
 
 .dropdown-menu{
   width: 100%;
-  top: 60%;
+  top: 70%;
   border: none;
   box-shadow: 0 3px 9px 3px rgba(0,0,0,.175);
   padding-bottom: 0;
+}
+
+.dropdown-menu:before {
+  position: absolute;
+  top: -7px;
+  left: 70%;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+
+.dropdown-menu:after {
+  position: absolute;
+  top: -6px;
+  left: 70%;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  content: '';
 }
 
 .dropdown-menu > li {
@@ -167,6 +213,7 @@ nav{
 }
 
 #main{
+  font: inherit;
   padding-top: 100px;
   /*background-color: #f2f2f2;*/
   background: url('../images/backgrounds/small-crackle-bright.png') repeat;
@@ -174,10 +221,11 @@ nav{
 
 #content{
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 80px;
   margin-bottom: 100px;
   width: 90%;
   max-width: 1200px;
+  font: inherit;
   box-shadow: 1px 1px 5px rgba(0,0,0,.4);
   /*animation-name: paper-slide;
   animation-duration: 1.5s;
@@ -188,27 +236,48 @@ nav{
 #hello{
   height: 350px;
   position: relative;
+  margin-bottom: 100px;
+  font: inherit;
+  font-size: 24px;
 }
 
-@keyframes paper-slide{
+.small{
+  font-variant: small-caps;
+}
+
+#hello > .row {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#hello > .row  >.col-sm-4{
+  padding: 15px;
+}
+
+#hello > .row > .col-sm-4 > img{
+  height:100%;
+  width:100%;
+  border-radius: 50%;
+}
+
+/*@keyframes paper-slide{
   0%{
     transform: translate3d(0px,600px,0px);
   }
   100%{
   }
-}
+}*/
 
-#hello > h1{
-  font-family: 'Courgette', cursive;
+#hello > .row > .col-sm-8 > header > h1{
+  font-family: inherit;
   color: #000;
-  font-size: 100px;
-  padding-left: 100px;
-  animation-name: fadeslide;
+  font-size: 50px;
+  /*animation-name: fadeslide;
   animation-duration: 2.5s;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-out;*/
 }
 
-@keyframes fadeslide {
+/*@keyframes fadeslide {
   0%{
     opacity: 0;
   }
@@ -222,22 +291,23 @@ nav{
     opacity: 1;
   }
 
-}
+}*/
 
 #hello > p{
   color: #000;
   /*opacity: 0;*/
   font-size: 50px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
   padding-left: 100px;
   padding-right: 100px;
-  animation-name: hellofade;
+  /*animation-name: hellofade;
   animation-duration: 2.5s;
   animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;*/
 }
 
-@keyframes hellofade {
+/*@keyframes hellofade {
   0%{
     opacity: 0;
   }
@@ -248,18 +318,18 @@ nav{
   100%{
     opacity: 1;
   }
-}
+}*/
 
 #scroll-me{
   position: absolute;
   bottom: 40px;
   left: 50%;
   width: 11px;
-  animation-name: scroll-fade-in;
-  animation-duration: 10s;
+  /*animation-name: scroll-fade-in;
+  animation-duration: 10s;*/
 }
 
-@keyframes scroll-fade-in{
+/*@keyframes scroll-fade-in{
   0%{
     opacity: 0;
   }
@@ -269,7 +339,7 @@ nav{
   100%{
     opacity: 1;
   }
-}
+}*/
 
 #scroll-me.scroll-hidden{
   opacity: 1;
@@ -329,11 +399,11 @@ nav{
   font-size: 50px;
   margin-bottom: 50px;
   margin-top: 0;
-  animation-name: project-header-fade-in;
-  animation-duration: 3s;
+  /*animation-name: project-header-fade-in;
+  animation-duration: 3s;*/
 }
 
-@keyframes project-header-fade-in{
+/*@keyframes project-header-fade-in{
   0%{
     opacity: 0;
   }
@@ -344,7 +414,7 @@ nav{
   100%{
     opacity: 1;
   }
-}
+}*/
 
 #project-teasers{
   height: 800px;
@@ -352,11 +422,11 @@ nav{
   /*box-shadow: 0px -2px 7px rgba(0,0,0,.4);*/
   opacity: 1;
   /*z-index: 2;*/
-  animation-name: projects-fade-in;
-  animation-duration: 3.3s;
+  /*animation-name: projects-fade-in;
+  animation-duration: 3.3s;*/
 }
 
-@keyframes projects-fade-in{
+/*@keyframes projects-fade-in{
   0%{
     opacity: 0;
   }
@@ -367,7 +437,7 @@ nav{
   100%{
     opacity: 1;
   }
-}
+}*/
 
 #projects-wrapper{
   height: 100%;
@@ -563,8 +633,8 @@ code > .keyword{
   display: block;
   background-color: #fff;
   z-index: 6;
-  animation-name: projects-fade-in;
-  animation-duration: 3.3s;
+  /*animation-name: projects-fade-in;
+  animation-duration: 3.3s;*/
 }
 
 #timeline-section-1 > h1{

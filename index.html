@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
@@ -43,7 +44,7 @@
       <li id="nav-logo"><img src="images/logo-no-underline.svg"></li>
       <li><a href="resume.html">Résumé</a></li>
       <li id="contact" class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Contact</a>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Contact <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="mailto:chrislbellny@gmail.com?subject=Opportunity%20for%20a%20handsome%20developer%20such%20as%20yourself" target="_blank"><img src="images/icons/email.png">email</a></li>
           <li><a href="https://www.linkedin.com/in/CurrrBell" target="_blank"><img src="images/icons/linkedin.png">/in/CurrrBell</a></li>
@@ -56,59 +57,73 @@
   </nav>
   <div id="main">
     <div id="content">
-      <div id="hello">
-        <h1>Hi!</h1>
-        <p>I'm Chris Bell, a software engineer and web developer based in Washington DC</p>
+      <section id="hello">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="images/my_face.png">
+          </div>
+          <div class="col-sm-8">
+            <header>
+              <h1>Hi, I'm <strong>Chris Bell</strong>.</h1>
+            </header>
+            <p>I'm a software engineer and web developer based in Washington <span class="small">DC</span>.</p>
+          </div>
+        </div>
+
+
+
         <!-- <div id="scroll-me">
           <img class="paper-dot" src="images/dot.svg">
           <img class="paper-dot" src="images/dot.svg">
           <img class="paper-dot" src="images/dot.svg">
         </div> -->
-      </div>
-      <h1>What I've built</h1>
-      <div id="project-teasers">
-        <div id="projects-wrapper">
-          <div class="row">
-            <div class="col-sm-6">
-              <div id="project-1">
-                <img class="project-display" src="images/SCG-macbook-display.png">
-                <!-- <img class="project-display" src="images/SCG-iphone-display.png"> -->
+      </section>
+      <section id="portfolio">
+        <h1>What I've built</h1>
+        <div id="project-teasers">
+          <div id="projects-wrapper">
+            <div class="row">
+              <div class="col-sm-6">
+                <div id="project-1">
+                  <img class="project-display" src="images/SCG-macbook-display.png">
+                  <!-- <img class="project-display" src="images/SCG-iphone-display.png"> -->
+                </div>
+                <div class="project-overlay">
+                  <h1>The Scientific Consulting Group</h1>
+                  <h2>Coming Soon</h2>
+                </div>
               </div>
-              <div class="project-overlay">
-                <h1>The Scientific Consulting Group</h1>
-                <h2>Coming Soon</h2>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div id="project-2">
-              </div>
-              <div class="project-overlay">
-                <h1><a href="https://twitter.com/AutomaTrump" target="_blank">Automa-Trump<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></h1>
-                <h2><a href="AutomaTrump.html">How it works</a></h2>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div id="project-3">
-              </div>
-              <div class="project-overlay">
-                <h1>myDeclining iOS app</h1>
-                <h2>Coming Soon</h2>
+              <div class="col-sm-6">
+                <div id="project-2">
+                </div>
+                <div class="project-overlay">
+                  <h1><a href="https://twitter.com/AutomaTrump" target="_blank">Automa-Trump<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></h1>
+                  <h2><a href="AutomaTrump.html">How it works</a></h2>
+                </div>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div id="project-4">
-                <img class="project-display" src="images/Pi-Day-display.png">
+            <div class="row">
+              <div class="col-sm-6">
+                <div id="project-3">
+                </div>
+                <div class="project-overlay">
+                  <h1>myDeclining iOS app</h1>
+                  <h2>Coming Soon</h2>
+                </div>
               </div>
-              <div class="project-overlay">
-                <h1>NIH Pi Day</h1>
-                <h2>Coming Soon</h2>
+              <div class="col-sm-6">
+                <div id="project-4">
+                  <img class="project-display" src="images/Pi-Day-display.png">
+                </div>
+                <div class="project-overlay">
+                  <h1>NIH Pi Day</h1>
+                  <h2>Coming Soon</h2>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>      
       <div id="timeline-section-1">
         <h1>How I got here</h1>
         <div class="row">
