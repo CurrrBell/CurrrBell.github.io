@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/trump.css">
   <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
+
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -41,20 +40,11 @@
 <body>
   <nav id="top-nav">
     <ul id="nav-bar">
-      <li><a href="index.html">Home</a></li>
-      <li class="active"><a href="#">Projects</a></li>
+      <li class="active"><a class="scrolly" href="index.html#main">Home</a></li>
+      <li><a href="#portfolio" class="scrolly">Projects</a></li>
       <li id="nav-logo"><img src="images/logo-no-underline.svg"></li>
       <li><a href="resume.html">Résumé</a></li>
-      <li id="contact" class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Contact</a>
-        <ul class="dropdown-menu">
-          <li><a href="mailto:chrislbellny@gmail.com?subject=Opportunity%20for%20a%20handsome%20developer%20such%20as%20yourself" target="_blank"><img src="images/icons/email.png">email</a></li>
-          <li><a href="https://www.linkedin.com/in/CurrrBell" target="_blank"><img src="images/icons/linkedin.png">/in/CurrrBell</a></li>
-          <li><a href="https://github.com/CurrrBell" target="_blank"><img src="images/icons/github.png">/CurrrBell</a></li>
-          <li><a href="https://www.hackerrank.com/CurrrBell" target="_blank"><img src="images/icons/hackerrank.png">@CurrrBell</a></li>
-          <li><a href="https://twitter.com/CurrrBell" target="_blank"><img src="images/icons/twitter.png">@CurrrBell</a></li>
-        </ul>
-      </li>
+      <li><a class="scrolly" href="#contact">Contact</a></li>
     </ul>
   </nav>
   <div id="main">
@@ -199,4 +189,21 @@
     </div>
   </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA2KTN5lYwfgF8NSgJ3eXMhZk8OGxCQ_Jc",
+    authDomain: "portfolio-59959.firebaseapp.com",
+    databaseURL: "https://portfolio-59959.firebaseio.com",
+    storageBucket: "portfolio-59959.appspot.com",
+    messagingSenderId: "968038622169"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.scrolly.min.js"></script>
+<script src="js/script.js"></script>
 </html>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -8,9 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
+
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -39,20 +40,11 @@
 <body>
   <nav id="top-nav">
     <ul id="nav-bar">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Projects</a></li>
+      <li class="active"><a class="scrolly" href="#main">Home</a></li>
+      <li><a href="#portfolio" class="scrolly">Projects</a></li>
       <li id="nav-logo"><img src="images/logo-no-underline.svg"></li>
       <li><a href="resume.html">Résumé</a></li>
-      <li id="contact" class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Contact <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="mailto:chrislbellny@gmail.com?subject=Opportunity%20for%20a%20handsome%20developer%20such%20as%20yourself" target="_blank"><img src="images/icons/email.png">email</a></li>
-          <li><a href="https://www.linkedin.com/in/CurrrBell" target="_blank"><img src="images/icons/linkedin.png">/in/CurrrBell</a></li>
-          <li><a href="https://github.com/CurrrBell" target="_blank"><img src="images/icons/github.png">/CurrrBell</a></li>
-          <li><a href="https://www.hackerrank.com/CurrrBell" target="_blank"><img src="images/icons/hackerrank.png">@CurrrBell</a></li>
-          <li><a href="https://twitter.com/CurrrBell" target="_blank"><img src="images/icons/twitter.png">@CurrrBell</a></li>
-        </ul>
-      </li>
+      <li><a class="scrolly" href="#contact">Contact</a></li>
     </ul>
   </nav>
   <div id="main">
@@ -67,7 +59,7 @@
               <h1>Hi, I'm <strong>Chris Bell</strong>.</h1>
             </header>
             <p>I'm a software engineer and web developer based in Washington <span class="small">DC</span>.</p>
-            <a class="btn btn-lg">Learn about what I do</a>
+            <a href="#skillz" class="btn btn-lg scrolly">Learn about what I do</a>
           </div>
         </div>
       </div>
@@ -80,70 +72,104 @@
         <div class="row">
           <div class="col-sm-3">
             <i class="fa fa-headphones fa-featured" aria-hidden="true"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>I experiment a lot in FL Studio and occasionally post the results. Take a listen and leave me a mean comment.</p>
             <a class="btn">Check out my Soundcloud</a>
           </div>
           <div class="col-sm-3">
             <i class="fa fa-code fa-featured" aria-hidden="true"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="btn">See some of my recent work</a>
+            <p>Writing code is something I'm actually good at (unlike music) and is how I make my living. I build a pretty wide variety of applications.</p>
+            <a href="#portfolio" class="btn scrolly">See some of my recent work</a>
           </div>
           <div class="col-sm-3">
             <i class="fa fa-gamepad fa-featured" aria-hidden="true"></i>
-            <p>I stream video games on twitch.tv occasionally. I'm no pro, but you'll be entertained!</p>
-            <a class="btn">Come hang out</a>
+            <p>I stream video games on twitch. I'm no pro, but you'll be entertained!</p>
+            <a href="https://www.twitch.tv/CurrrBell" target="_blank" class="btn">Come hang out</a>
           </div>
         </div>
+        <hr>
       </div>
     </section>
     <section id="portfolio">
       <div class="content-wrapper">
         <header>
-          <h1>What I've built</h1>
+          <h1>Some stuff I've done recently</h1>
         </header>
-        <div id="project-teasers">
-          <div id="projects-wrapper">
-            <div class="row">
-              <div class="col-sm-6">
-                <div id="project-1">
-                  <img class="project-display" src="images/SCG-macbook-display.png">
-                  <!-- <img class="project-display" src="images/SCG-iphone-display.png"> -->
-                </div>
-                <div class="project-overlay">
-                  <h1>The Scientific Consulting Group</h1>
-                  <h2>Coming Soon</h2>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div id="project-2">
-                </div>
-                <div class="project-overlay">
-                  <h1><a href="https://twitter.com/AutomaTrump" target="_blank">Automa-Trump<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></h1>
-                  <h2><a href="AutomaTrump.html">How it works</a></h2>
-                </div>
-              </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="images/SCG.png" class="project-display">
+            <div class="caption">
+              <h3>The Scientific Consulting Group</h3>
             </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div id="project-3">
-                </div>
-                <div class="project-overlay">
-                  <h1>myDeclining iOS app</h1>
-                  <h2>Coming Soon</h2>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div id="project-4">
-                  <img class="project-display" src="images/Pi-Day-display.png">
-                </div>
-                <div class="project-overlay">
-                  <h1>NIH Pi Day</h1>
-                  <h2>Coming Soon</h2>
-                </div>
-              </div>
+          </div>
+          <div class="col-sm-6">
+            <img src="images/Automa-Trump.png" class="project-display">
+            <div class="caption">
+              <h3><a href="https://twitter.com/AutomaTrump" target="_blank">Automa-Trump</a></h3>
+              <h4><a href="AutomaTrump.html">How it works</a></h4>
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="images/phone_shot.png" class="project-display">
+            <div class="caption">
+              <h3>myDeclining iOS app</h3>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <img src="images/Pi-Day.png" class="project-display">
+            <div class="caption">
+              <h3><a href="https://nihpiday.nih.gov/" target="_blank">NIH Pi Day</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="content-wrapper">
+        <header>
+          <h1>Get in touch with me</h1>
+        </header>
+        <form id="message">
+          <div class="row">
+            <div class="col-sm-6">
+              <input type="text" name="name" id="name" placeholder="Name">
+            </div>
+            <div class="col-sm-6">
+              <input type="text" name="email" id="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <input type="text" name="subject" id="subject" placeholder="Subject">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <textarea type="text" name="message" id="message" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <div class="row form-buttons">
+            <div class="col-sm-6">
+              <a class="btn" id="submit">Send Message</a>
+            </div>
+            <div class="col-sm-6">
+              <input type="reset" value="Clear Form" class="alt">
+            </div>
+          </div>
+        </form>
+        <hr>
+        <h1>Find me on</h1>
+        <ul class="social">
+          <li><a href="https://github.com/CurrrBell" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+          <li><a href="https://www.linkedin.com/in/currrbell" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://twitter.com/CurrrBell" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="https://www.instagram.com/currrbell/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://www.facebook.com/chris.bell.33865" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<!-- <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+          <li><a href="https://soundcloud.com/currrbell" target="_blank" class="icon fa-soundcloud"><span class="label">Soundcloud</span></a></li>
+				</ul>
+        <hr>
       </div>
     </section>
       <!-- <div id="timeline-section-1">
@@ -187,8 +213,25 @@
       <div id="timeline-section-2">
       </div> -->
     <div id="copy">
-      <span>&copy; 2016 Chris Bell - All rights reserved</span>
+      <span>&copy; Chris Bell - All rights reserved</span>
     </div>
   </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA2KTN5lYwfgF8NSgJ3eXMhZk8OGxCQ_Jc",
+    authDomain: "portfolio-59959.firebaseapp.com",
+    databaseURL: "https://portfolio-59959.firebaseio.com",
+    storageBucket: "portfolio-59959.appspot.com",
+    messagingSenderId: "968038622169"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.scrolly.min.js"></script>
+<script src="js/script.js"></script>
 </html>
