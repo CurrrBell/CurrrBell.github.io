@@ -959,19 +959,19 @@ ul.social li a:hover:before {
   }
 
   .nav-scrolled{
-    animation-name: unset;
+    animation-name: none;
   }
 
   .nav-scrolled > #nav-bar{
-    animation-name: unset;
+    animation-name: none;
   }
 
   .nav-scrolled > #nav-bar > li{
-    animation-name: unset;
+    animation-name: none;
   }
 
   .nav-scrolled > #nav-bar > #nav-logo{
-    animation-name: unset;
+    animation-name: none;
   }
 
   #nav-bar{
