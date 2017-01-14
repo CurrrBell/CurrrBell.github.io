@@ -1,3 +1,7 @@
+#main{
+  background-color: #f5f5f5;
+}
+
 #paper{
   margin: 0 auto;
   margin-top: 100px;
@@ -48,4 +52,8 @@ h4{
 .date{
   display: inline;
   float: right;
+}
+
+#copy{
+  background-color: #f5f5f5;
 }

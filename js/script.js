@@ -16,20 +16,26 @@ $(document).scroll(function() {
   });
 
 $('#submit').click(function(){
+
   var ONE_HOUR = 60 * 60 * 1000;
   var name = $('#name').val();
   var email = $('#email').val();
   var subject = $('#subject').val();
   var message = $('textarea#message').val();
-  var now = new Date();
 
-  var date = now.getFullYear().toString() + now.getMonth().toString() + now.getDate().toString();
+  if(!(name == "" || email == "" || subject == "" || message == "")){
+    var now = new Date();
 
-  firebase.database().ref('messages/' + date).set({
-    timestamp : now.getTime(),
-    name : name,
-    email : email,
-    subject : subject,
-    message : message
-  });
+    var key = now.getFullYear().toString() + now.getMonth().toString() + now.getDate().toString() + email;
+
+    firebase.database().ref('messages/' + key).set({
+      timestamp : now.getTime(),
+      name : name,
+      email : email,
+      subject : subject,
+      message : message
+    });
+
+    $('#message-form').reset();
+  }
 });
