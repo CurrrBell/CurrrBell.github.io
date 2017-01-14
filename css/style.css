@@ -994,9 +994,13 @@ ul.social li a:hover:before {
 
   #nav-bar > #nav-logo{
     width: 20%;
-    padding: 15px;
+    padding: 0;
     padding-top: 13px;
     padding-bottom: 14px;
+  }
+
+  #nav-bar > #nav-logo > img{
+    max-height: 33px;
   }
 
   #main{
