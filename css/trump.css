@@ -84,14 +84,14 @@ h3{
   text-decoration: none;
 }
 
-#explanation > h1{
+section > h1{
   font-size: 56px;
   text-align: left;
   margin-top: 80px;
   margin-bottom: 30px;
 }
 
-#explanation > .tweets{
+.tweets{
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -105,16 +105,16 @@ h3{
   font-size: 20px;
 }
 
-#explanation > p > a,
-#explanation > p > a:focus{
+p > a,
+p > a:focus{
   color: #ff5722;
   border-bottom: 1px dashed #ff5722;
   display: inline;
   text-decoration: none;
 }
 
-#explanation > p > a:hover,
-#explanation > p > a:active{
+p > a:hover,
+p > a:active{
   color: #000;
   border-color: #000;
   text-decoration: none;
@@ -231,7 +231,7 @@ code > .keyword{
     font-size: 14px;
   }
 
-  #explanation > h1{
+  section > h1{
     margin-top: 30px;
     font-size: 30px;
   }
