@@ -140,18 +140,9 @@
         <p>There are several coherent phrases, but the fact that some words have multiple entries in their list of neighbors allows for those phrases to mix and match.</p>
         <section id="challenges">
           <h1>Challenges</h1>
-          <p>Twitter lets you pull a maximum of 200 tweets per API call. At first, I let the bot analyze all 200 tweets in a Markov chain. The bot's tweets tended to be all over the place (not in the same way as the real Trump, though) and consistently rambled until it hit the 140 character limit. For example:</p>
-          <div class="tweets">
-            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today there were terror attacks in Germany said today about Hillary focused on popular vote- and expand its nuclear capability until such</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/812874455596879873">December 25, 2016</a></blockquote>
-            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Bill Clinton stated that I have asked Boeing to get people like those who killed so many supporters, talking about airplane capability and</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/812875422585290752">December 25, 2016</a></blockquote>
-          </div>
-          <p>There are several problems with my initial approach. Firstly, using the full batch of 200 tweets causes common words to have many things in its neighbor list. Instead of a few coherent phrases mixed and matched, tweets are more like jumbles of single words from 100+ individual tweets. To combat this, I began picking 5 tweets at random from the 200 for the tweetbase.</p>
-          <p>Another issue is that many of those 200 tweets are low-quality for the bot's purposes; <a href="http://www.varianceexplained.org/r/trump-tweets/" target="_blank">a large portion of Trump's tweets are not written by him</a>, but are penned by his staff</p>
-          <div class="tweets">
-            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Thank you Alabama! From now on, it’s going to be <a href="https://twitter.com/hashtag/AmericaFirst?src=hash">#AmericaFirst</a>. Our goal is to bring back that wonderful phrase: <a href="https://twitter.com/hashtag/MadeInTheUSA?src=hash">#MadeInTheUSA</a>! <a href="https://t.co/O3RBYD2dT3">pic.twitter.com/O3RBYD2dT3</a></p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/810276411177107456">December 18, 2016</a></blockquote>
-          </div>
-          <p>Those are boring, of course, so they have to go.</p>
-          <p>Even after getting rid of those, however, there are issues. Unfortunately, The Donald's twitter etiquette leaves much to be desired:</p>
+          <p>Composing tweets with vanilla Markov Chains is fairly easy to accomplish in fewer than 100 lines of code. The real challenge comes in making those tweets interesting. There are several major hurdles to accomplishing this.</p>
+          <p>First is the 140-character limit on tweet length. It's often difficult to express a thought in such a succinct manner, especially when that "thought" is being randomly generated word by word; frequently generated tweets run up against the character limit and cut off mid-phrase.</p>
+          <p>Our Glorious Leader often struggles to keep his thoughts concise (or coherent). Indeed, he frequently goes on <a href="https://www.twitter.com/kanyewest">Westian</a> rants:</p>
           <div class="tweets">
             <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The U.S. is going to substantialy reduce taxes and regulations on businesses, but any business that leaves our country for another country,</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805376548882776064">December 4, 2016</a></blockquote>
             <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">fires its employees, builds a new factory or plant in the other country, and then thinks it will sell its product back into the U.S.  ......</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805378393537658880">December 4, 2016</a></blockquote>
@@ -160,7 +151,22 @@
             <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">these companies are able to move between all 50 states, with no tax or tariff being charged. Please be forewarned prior to making a very ...</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805386422807105536">December 4, 2016</a></blockquote>
             <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">expensive mistake! THE UNITED STATES IS OPEN FOR BUSINESS</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805387038048612356">December 4, 2016</a></blockquote>
           </div>
-          <p>Unlike most reasonable people, he regularly tweets extended rants as if he's Kanye West. This is a huge hurdle for the bot's tweet quality. The best way to weed out these rants is to not include tweets that don't start with a capital letter.</p>
+          <p>This is the second major hurdle for tweet quality: uninteresting source material. These rants are scatterbrained and boring (usually), so the bank of source tweets needs to be trimmed to exclude them. Ignoring tweets that start with a lowercase letter is an effective, if inexact, way to avoid them.</p>
+          <p>Another issue is that <a href="http://www.varianceexplained.org/r/trump-tweets/" target="_blank">a large portion of Trump's tweets are not written by The Mad Tweeter himself</a>, but are penned by his staff</p>
+          <div class="tweets">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Thank you Alabama! From now on, it’s going to be <a href="https://twitter.com/hashtag/AmericaFirst?src=hash">#AmericaFirst</a>. Our goal is to bring back that wonderful phrase: <a href="https://twitter.com/hashtag/MadeInTheUSA?src=hash">#MadeInTheUSA</a>! <a href="https://t.co/O3RBYD2dT3">pic.twitter.com/O3RBYD2dT3</a></p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/810276411177107456">December 18, 2016</a></blockquote>
+          </div>
+          <p>Those are boring, of course, so they have to go.</p>
+          <!-- <p>Twitter lets you pull a maximum of 200 tweets per API call. At first, I let the bot analyze all 200 tweets in a Markov chain. The bot's tweets tended to be all over the place (not in the same way as the real Trump, though) and consistently rambled until it hit the 140 character limit. For example:</p>
+          <div class="tweets">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today there were terror attacks in Germany said today about Hillary focused on popular vote- and expand its nuclear capability until such</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/812874455596879873">December 25, 2016</a></blockquote>
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Bill Clinton stated that I have asked Boeing to get people like those who killed so many supporters, talking about airplane capability and</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/812875422585290752">December 25, 2016</a></blockquote>
+          </div>
+          <p>There are several problems with my initial approach. Firstly, using the full batch of 200 tweets causes common words to have many things in its neighbor list. Instead of a few coherent phrases mixed and matched, tweets are more like jumbles of single words from 100+ individual tweets. To combat this, I began picking 5 tweets at random from the 200 for the tweetbase.</p>
+
+          <p>Even after getting rid of those, however, there are issues. Unfortunately, The Donald's twitter etiquette leaves much to be desired:</p>
+
+          <p>Unlike most reasonable people, he regularly tweets extended rants as if he's Kanye West. This is a huge hurdle for the bot's tweet quality. The best way to weed out these rants is to not include tweets that don't start with a capital letter.</p> -->
           <p>This tweet-slimming noticeably improves output:</p>
           <div class="tweets">
             <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I never learn! Bad reporter.</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/812881050229702656">December 25, 2016</a></blockquote>
@@ -169,7 +175,7 @@
           <div class="tweets">
             <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I will be interviewed today on Fox News Sunday with The Apprentice except for fact that I will be interviewed today on Fox News Sunday with</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/813138565173571584">December 25, 2016</a></blockquote>
           </div>
-          <p>This is because our word graph, <span class="snippet">wordCount</span>, contains cycles. Once the algorithm gets to "fact that", it goes back to the same word that began the tweet, "I"</p>
+          <p>This is because our word graph, <span class="snippet">wordCount</span>, contains cycles. Once the algorithm gets to "fact that" in the example above, it goes back to the same word that began the tweet, "I"</p>
           <img class="diagram" src="images/word_graph.PNG">
           <p>and we get the same phrase again. Cycles are not all bad, however. They can, in fact, produce some humorous tweets as well:</p>
           <div class="tweets">
@@ -188,7 +194,7 @@
             <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If my many supporters acted and dealmaker. Stay tuned!</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/813943393923592196">December 28, 2016</a></blockquote>
           </div>
           <p>With a big enough following, the engagement data for each tweet could be used as a tweet quality metric. With that data, particularly funny phrases or source tweets could be machine learned and pulled from more frequently in the tweet synthesis process.</p>
-        </section>        
+        </section>
       </section>
     </section>
   </div>

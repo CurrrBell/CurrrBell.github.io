@@ -60,7 +60,7 @@ h3{
   margin: 0 auto;
   padding: 120px;
   font-size: 24px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   border: 1px solid #e1e8ed;
   box-shadow: 0 0 11px -5px rgba(0,0,0,.4);
 }
@@ -86,7 +86,9 @@ h3{
 
 section > h1{
   font-size: 56px;
+  font-family: 'Lato', sans-serif;
   text-align: left;
+  margin-left: -40px;
   margin-top: 80px;
   margin-bottom: 30px;
 }
@@ -217,7 +219,7 @@ code > .keyword{
     margin-bottom: 30px;
   }
 
-  #explanation > .tweets{
+  .tweets{
     padding-top: 25px;
     padding-bottom: 25px;
   }
@@ -229,9 +231,11 @@ code > .keyword{
     padding-right: 10px;
     padding-bottom: 30px;
     font-size: 14px;
+    border: none;
   }
 
   section > h1{
+    margin-left: 0;
     margin-top: 30px;
     font-size: 30px;
   }
