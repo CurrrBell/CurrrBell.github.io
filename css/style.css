@@ -218,6 +218,20 @@ nav{
   margin-right: 10px;
 }
 
+#loading{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+#loading > i{
+  position: absolute;
+  left: calc(50% - 27px);
+  top: calc(50% - 21px);
+}
+
 #main{
   font: inherit;
   padding-top: 100px;

@@ -3,17 +3,21 @@ $(document).scroll(function() {
     $('#top-nav').toggleClass('nav-scrolled', $(this).scrollTop() > 80);
 });
 
+$(document).ready(function(){
+  $('#loading').hide();
+});
+
 // Scrolly.
-  $(window).load(function() {
+$(window).load(function() {
 
-    var x = parseInt($('.content-wrapper').first().css('padding-top')) + 50;
+  var x = parseInt($('.content-wrapper').first().css('padding-top')) + 50;
 
-    $('#nav a, .scrolly').scrolly({
-      speed: 1000,
-      offset: x
-    });
-
+  $('#nav a, .scrolly').scrolly({
+    speed: 1000,
+    offset: x
   });
+
+});
 
 $('#submit').click(function(){
 
