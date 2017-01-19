@@ -126,9 +126,10 @@ nav{
 #nav-bar > #nav-logo{
   width: 120px;
   padding: 20px;
-  padding-top: 24px;
-  padding-bottom: 23px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
 
 .nav-scrolled > #nav-bar > #nav-logo{
   animation-name: nav-logo-scroll;
@@ -140,13 +141,13 @@ nav{
 @keyframes nav-logo-scroll{
   0%{
     width: 120px;
-    padding-top: 24px;
-    padding-bottom: 23px;
-  }
-  100%{
-    width: 100px;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  100%{
+    width: 90px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 
