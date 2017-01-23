@@ -94,8 +94,8 @@ section > h1{
 }
 
 .tweets{
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #explanation > ul{
@@ -158,8 +158,8 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
   margin-top: 50px;
   margin-bottom: 50px;
   line-height: 28px;
-  margin-left: -120px;
-  margin-right: -120px;
+  margin-left: -110px;
+  margin-right: -110px;
 }
 
 code{
