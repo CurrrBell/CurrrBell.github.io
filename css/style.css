@@ -5,6 +5,7 @@
 
 body{
   font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 nav{
@@ -23,7 +24,7 @@ nav{
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: #fff;
+  background-color: #E0E0E0;
   /*border-bottom: 2px solid rgba(0,0,0,.1);*/
   z-index: 999;
 }
@@ -50,7 +51,7 @@ nav{
 #nav-bar {
   /*position: relative;*/
   height: 100%;
-  width: 710px;
+  width: 720px;
   list-style: none;
   padding: 0;
   margin: 0 auto;
@@ -67,13 +68,13 @@ nav{
 #nav-bar > li > a,
 #nav-bar > li > a:focus{
   text-decoration: none;
-  color: #aaa;
+  color: #666;
 }
 
 #nav-bar > li > a:hover,
 #nav-bar > li > a:active{
   text-decoration: none;
-  color: #888;
+  color: #000;
 }
 
 #nav-bar > .active{
@@ -96,7 +97,7 @@ nav{
 
 @keyframes nav-bar-scroll{
   0%{
-    width: 710px;
+    width: 720px;
   }
   100%{
     width: 550px;
@@ -129,7 +130,6 @@ nav{
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
 
 .nav-scrolled > #nav-bar > #nav-logo{
   animation-name: nav-logo-scroll;
@@ -281,6 +281,7 @@ nav{
   font-family: inherit;
   color: #000;
   font-size: 50px;
+  font-weight: 300;
   margin-top: 70px;
   /*animation-name: fadeslide;
   animation-duration: 2.5s;
@@ -296,7 +297,7 @@ nav{
   background-color: #43b3e0;
   color: #fff;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 #skillz{
@@ -351,7 +352,7 @@ nav{
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   color: #fff;
 }
 
@@ -425,12 +426,13 @@ nav{
 
 #portfolio > .content-wrapper > .row > .col-sm-6 > .caption > h3{
   text-align: center;
-  font-weight: bold;
+  font-weight: 400;
   margin:0;
 }
 
 #portfolio > .content-wrapper > .row > .col-sm-6 > .caption > h4{
   text-align: center;
+  font-weight: 300;
   margin-bottom: 0;
 }
 
@@ -486,14 +488,14 @@ nav{
   margin-bottom: 50px;
   color: #fff;
   text-align: center;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 #contact > .content-wrapper > header > h1{
   margin-bottom: 70px;
   color: #fff;
   text-align: center;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 #contact > .content-wrapper > form > .row{
@@ -567,7 +569,7 @@ nav{
   color: #fff;
   background-color: #404040;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   height: 60px;
   border-radius: 4px;
   border-width: 0;
@@ -582,7 +584,7 @@ nav{
   color: #fff;
   background-color: #43b3e0;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   padding-top: 16px;
   padding-bottom: 14px;
 
