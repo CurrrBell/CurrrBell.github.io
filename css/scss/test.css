@@ -15,7 +15,7 @@ body {
   position: fixed;
   top: 0;
   background-color: #fff;
-  z-index: 9;
+  z-index: 4;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   transition: height .3s; }
   #top-nav #nav-bar {
@@ -31,9 +31,7 @@ body {
     transition: width .3s; }
     #top-nav #nav-bar li {
       float: left;
-      padding: 40px;
-      padding-top: 35px;
-      padding-bottom: 34px;
+      padding: 35px 40px 34px 40px;
       transition: padding .3s, padding-top .3s, padding-bottom .3s; }
       #top-nav #nav-bar li a {
         color: #666;
@@ -63,9 +61,7 @@ body {
           text-decoration: none; }
     #top-nav #nav-bar #nav-logo {
       width: 120px;
-      padding: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding: 10px 20px 10px 20px;
       transition: width .3s, padding-top .3s, padding-bottom .3s; }
 
 .nav-scrolled {
@@ -73,12 +69,43 @@ body {
   .nav-scrolled #nav-bar {
     width: 550px; }
     .nav-scrolled #nav-bar li {
-      padding: 20px;
-      padding-top: 15px;
-      padding-bottom: 14px; }
+      padding: 15px 20px 14px 20px; }
     .nav-scrolled #nav-bar #nav-logo {
       width: 90px;
-      padding-top: 5px;
-      padding-bottom: 5px; }
+      padding: 5px 0 5px 0; }
+
+#loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 24;
+  background-color: rgba(255, 255, 255, 0.8); }
+  #loading i {
+    position: absolute;
+    left: calc(50% - 27px);
+    top: calc(50% - 21px); }
+
+#soundcloud-button, #portfolio-button, #twitch-button {
+  padding: 6px 12px;
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  -moz-transition: font-size 0.3s, box-shadow 0.3s;
+  -webkit-transition: font-size 0.3s, box-shadow 0.3s;
+  transition: font-size 0.3s, box-shadow 0.3s; }
+  #soundcloud-button:hover, #portfolio-button:hover, #twitch-button:hover {
+    font-size: 16.32px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25); }
+
+#soundcloud-button {
+  background-color: #eee; }
+
+#portfolio-button {
+  background-color: #ddd; }
+
+#twitch-button {
+  background-color: #ccc; }
 
 /*# sourceMappingURL=test.css.map */

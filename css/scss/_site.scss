@@ -5,6 +5,8 @@
 // raised card/button height = 6
 // modal height = 24
 
+@import '_mixins';
+
 $content-width: 90%;
 $content-max-width: 1200px;
 $base-height: 1;
@@ -21,61 +23,11 @@ $height-4-shadow: 0 2px 10px rgba(0,0,0,.25);
 $height-6-shadow: 0 2px 20px rgba(0,0,0,.25);
 
 
-@mixin center{
-  margin:{
-    left: auto;
-    right: auto;
-  }
+@mixin raised-button($color){
+  @include button($color);
+  box-shadow: $height-2-shadow;
 }
 
-@mixin font-source-sans($size: false, $color: false, $weight: false,  $lh: false) {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    @if $size { font-size: $size; }
-    @if $color { color: $color; }
-    @if $weight { font-weight: $weight; }
-    @if $lh { line-height: $lh; }
-}
-
-@mixin link-color($link, $visit, $hover, $active, $decoration: none) {
-  a {
-    color: $link;
-    text-decoration: $decoration;
-    &:visited {
-      color: $visit;
-      text-decoration: $decoration;
-    }
-    &:hover {
-      color: $hover;
-      text-decoration: $decoration;
-    }
-    &:active {
-      color: $active;
-      text-decoration: $decoration;
-    }
-  }
-}
-
-@mixin margin($all: false, $top: false, $left: false, $right: false, $bottom: false){
-  @if $all { margin: $all; }
-  @if $top { margin-top: $top; }
-  @if $left { margin-left: $left; }
-  @if $right { margin-right: $right; }
-  @if $bottom { margin-bottom: $bottom; }
-}
-
-@mixin padding($all: false, $top: false, $left: false, $right: false, $bottom: false){
-  @if $all { padding: $all; }
-  @if $top { padding-top: $top; }
-  @if $left { padding-left: $left; }
-  @if $right { padding-right: $right; }
-  @if $bottom { padding-bottom: $bottom; }
-}
-
-@mixin transition($transition) {
-    -moz-transition:    $transition;
-    -webkit-transition: $transition;
-    transition:         $transition;
-}
 
 body{
   @include font-source-sans($color:$text-color, $weight:300);
@@ -108,7 +60,7 @@ body{
 
     li{
       float: left;
-      @include padding($all: 40px, $top: 35px, $bottom: 34px);
+      padding: 35px 40px 34px 40px;
       @include link-color($text-color, $text-color, $text-dark, $text-color);
       transition: padding .3s, padding-top .3s, padding-bottom .3s;
     }
@@ -120,7 +72,7 @@ body{
 
     #nav-logo{
       width: 120px;
-      @include padding($all: 20px, $top: 10px, $bottom: 10px);
+      padding: 10px 20px 10px 20px;
       transition: width .3s, padding-top .3s, padding-bottom .3s;
     }
   }
@@ -133,12 +85,12 @@ body{
     width: 550px;
 
     li{
-      @include padding($all: 20px, $top: 15px, $bottom: 14px);
+      padding: 15px 20px 14px 20px;
     }
 
     #nav-logo{
       width: 90px;
-      @include padding($top: 5px, $bottom: 5px);
+      padding: 5px 0 5px 0;
     }
   }
 }
