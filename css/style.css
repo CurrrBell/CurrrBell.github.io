@@ -438,7 +438,7 @@ body{
   border-top: 1px solid rgba(0,0,0,.08);
 }
 
-#portfolio > .content-wrapper > .row:nth-child(2) > .col-sm-6 > .caption{
+#portfolio > .content-wrapper > .row:nth-child(2) > .col-sm-6:last-child > .caption{
   padding-top: 23px;
   padding-bottom: 22px;
 }
