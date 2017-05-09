@@ -88,7 +88,7 @@ section > h1{
   font-size: 56px;
   font-family: 'Lato', sans-serif;
   text-align: left;
-  margin-left: -40px;
+  /*margin-left: -40px;*/
   margin-top: 80px;
   margin-bottom: 30px;
 }
@@ -160,6 +160,7 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
   line-height: 28px;
   margin-left: -110px;
   margin-right: -110px;
+  border-left: 4px solid #ff5722;
 }
 
 code{
@@ -173,7 +174,7 @@ code{
 
 code > .comment{
   font-style: italic;
-  color: #555;
+  color: #666;
 }
 
 code > .keyword{
