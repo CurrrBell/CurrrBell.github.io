@@ -807,10 +807,12 @@ ul.social li a:hover:before {
     animation-name: none !important;
   }
 
+  .nav-scrolled > #nav-bar,
   #nav-bar{
     width:100%;
   }
 
+  .nav-scrolled > #nav-bar > li,
   #nav-bar > li{
     width: 20%;
     padding: 0;
@@ -818,6 +820,7 @@ ul.social li a:hover:before {
     padding-bottom: 16px;
   }
 
+  .nav-scrolled > #nav-bar > li > a,
   #nav-bar > li > a{
     display: block;
     width: 100%;
@@ -825,6 +828,7 @@ ul.social li a:hover:before {
     font-size: 14px;
   }
 
+  .nav-scrolled > #nav-bar > #nav-logo,
   #nav-bar > #nav-logo{
     width: 20%;
     padding: 0;
@@ -832,6 +836,7 @@ ul.social li a:hover:before {
     padding-bottom: 14px;
   }
 
+  .nav-scrolled > #nav-bar > #nav-logo > img,
   #nav-bar > #nav-logo > img{
     max-height: 33px;
   }
