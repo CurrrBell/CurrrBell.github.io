@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/trump.css">
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-88114300-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <!-- End Google Analytics -->
+  <title>Automa-Trump | Chris Bell</title>
+</head>
+<body>
+  <nav id="top-nav">
+    <ul id="nav-bar">
+      <li><a class="scrolly" href="index">Home</a></li>
+      <li class="active"><a href="index.html#portfolio" class="scrolly">Projects</a></li>
+      <li id="nav-logo"><img src="images/logo.svg"></li>
+      <li><a href="resume.html">R&eacute;sum&eacute;</a></li>
+      <li><a class="scrolly" href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div id="main">
+    <div id="banner">
+      <div id="banner-bg">
+        <h1>Automa-Trump</h1>
+      </div>
+    </div>
+    <section id="details">
+      <section id="overview">
+        <p>Automa-Trump is a twitter bot that procedurally generates Trump-like tweets using <a href="https://en.wikipedia.org/wiki/Markov_chain" target="_blank">Markov chains</a>. He currently lives and operates in a Raspberry Pi that <a href="https://www.instagram.com/p/BO0xmULBwGq/" target="_blank">sits on my desk</a>, tweeting once every 6-12 hours. The Python source code can be found <a href="https://github.com/CurrrBell/AutomaTrump" target="_blank">here</a>.</p>
+        <h1>But why?</h1>
+        <p>It's funny</p>
+        <div class="tweets">
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Republicans must be built more quickly.</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/821989863922814976">January 19, 2017</a></blockquote>
+        </div>
+        <p>and sometimes poignant</p>
+        <div class="tweets">
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The United States must greatly strengthen and expand its senses regarding nukes</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/813052313006968832">December 25, 2016</a></blockquote>
+        </div>
+      </section>
+      <section id="explanation">
+        <h1>What's a Markov chain?</h1>
+        <p>The <a href="https://en.wikipedia.org/wiki/Markov_chain" target="_blank">Wikipedia article</a> is a bit hard to digest, but Markov chains (at least in this context) are actually very simple. Markov chains synthesize strings of data piece by piece based solely on the current piece of data being considered. It's best explained through example. Let's use these two tweets to build a new tweet using a Markov chain:</p>
+        <div class="tweets">
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The Green Party just dropped its recount suit in Pennsylvania and is losing votes in Wisconsin recount. Just a Stein scam to raise money!</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805486509914779649" target="_blank">December 4, 2016</a></blockquote>
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The final Wisconsin vote is in and guess what - we just picked up an additional 131 votes. The Dems and Green Party can now rest. Scam!</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/808456602076545025" target="_blank">December 12, 2016</a></blockquote>
+        </div>
+        <p>To construct a Markov chain using these, we iterate through each word in each tweet. For each, we store a list of words that come immediately after</p>
+        <div class="code-block">
+        <code>
+        wordsInTweet = re.findall(r"[@a-zA-Z0-9'-]+|[.,!?;:]", tweet)
+
+        <span class="keyword">if</span>(wordsInTweet[0] == "."): <span class="comment">#tweets starting with "." tend to just be bad</span>
+            tweetStarts.append(wordsInTweet[1])
+        <span class="keyword">else</span>:
+            tweetStarts.append(wordsInTweet[0])
+
+        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(wordsInTweet)):
+            thisWord = wordsInTweet[i]
+            nextWord = "EOF" <span class="comment">#keep track of words that were at the end of tweets</span>
+
+            <span class="keyword">if</span>(i < len(wordsInTweet) - 1): <span class="comment">#if we're not actually at the end of the tweet</span>
+                nextWord = wordsInTweet[i+1]
+            <span class="keyword">if</span>(thisWord <span class="keyword">in</span> wordCount.keys()):
+                wordCount[thisWord].append(nextWord)
+            <span class="keyword">else</span>:
+                wordCount[thisWord] = [nextWord]
+
+            <span class="keyword">if</span>(nextWord == "EOF"):
+                <span class="keyword">break</span>
+        </code>
+        </div>
+        <p>Thus, we are building an unweighted directed graph with each vertex corresponding to a word. In this case, <span class="snippet">wordCount</span> acts as the adjacency list of our word graph. Most words only have one word that ever appears after them. Some, however, have more than one</p>
+        <ul>
+          <li>The - Green, final, Dems</li>
+          <li>Party - just, can</li>
+          <li>just - dropped, picked</li>
+          <li>in - Pennsylvania, Wisconsin, and</li>
+          <li>and - is, guess, Green</li>
+          <li>is - losing, in</li>
+          <li>votes - in, .</li>
+          <li>Wisconsin - recount, vote</li>
+          <li>. - Just, The, Scam</li>
+        </ul>
+        <p>We will soon see that this is very important. Now that we have our graph built, we can use it to synthesize a new tweet</p>
+        <div class="code-block">
+        <code>
+        newTweet = ""
+        tweetStart = tweetStarts[random.randrange(0,len(tweetStarts))]
+        currentWord = tweetStart
+
+        <span class="keyword">while</span>(len(wordCount[currentWord]) > 0 <span class="keyword">and</span> (len(newTweet) + len(currentWord)) < 140):
+            nextWord = wordCount[currentWord][random.randrange(0, len(wordCount[currentWord]))]
+
+            <span class="keyword">if</span>(currentWord <span class="keyword">in</span> string.punctuation):
+                newTweet += currentWord
+            <span class="keyword">else</span>:
+                newTweet += " " + currentWord
+
+            <span class="keyword">if</span>(nextWord == "EOF"):
+                break
+
+            currentWord = nextWord
+
+        <span class="comment">#we have our tweet, let's post it</span>
+
+        twitter.update_status(status=newTweet)
+        </code>
+        </div>
+        <p>We first choose a word. Then, to choose the next word, we choose a random member of the initial word's list of neighbor words. For example, if we choose to start our tweet with "The", we randomly choose between "Green", "final", and "Dems" for our next word. We repeat this until there are either no words to choose from or we hit the 140 character limit. One possible result is:</p>
+        <blockquote>The Dems and Green Party just picked up an additional 131 votes. Just a Stein Scam to raise money!</blockquote>
+        <p>There are several coherent phrases, but the fact that some words have multiple entries in their list of neighbors allows for those phrases to mix and match.</p>
+        <section id="challenges">
+          <h1>Challenges</h1>
+          <p>Composing tweets with vanilla Markov Chains is fairly easy to accomplish in fewer than 100 lines of code. The real challenge comes in making those tweets interesting. There are several major hurdles to accomplishing this.</p>
+          <p>First is the 140-character limit on tweet length. It's often difficult to express a thought in such a succinct manner, especially when that "thought" is being randomly generated word by word; frequently generated tweets run up against the character limit and cut off mid-phrase.</p>
+          <p>Our Glorious Leader often struggles to keep his thoughts concise (or coherent). Indeed, he frequently goes on <a href="https://www.twitter.com/kanyewest">Westian</a> rants:</p>
+          <div class="tweets">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The U.S. is going to substantialy reduce taxes and regulations on businesses, but any business that leaves our country for another country,</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805376548882776064">December 4, 2016</a></blockquote>
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">fires its employees, builds a new factory or plant in the other country, and then thinks it will sell its product back into the U.S.  ......</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805378393537658880">December 4, 2016</a></blockquote>
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">without retribution or consequence, is WRONG! There will be a tax on our soon to be strong border of 35% for these companies ......</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805380553008680961">December 4, 2016</a></blockquote>
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">wanting to sell their product, cars, A.C. units etc., back across the border. This tax will make leaving financially difficult, but.....</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805382541343653888">December 4, 2016</a></blockquote>
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">these companies are able to move between all 50 states, with no tax or tariff being charged. Please be forewarned prior to making a very ...</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805386422807105536">December 4, 2016</a></blockquote>
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">expensive mistake! THE UNITED STATES IS OPEN FOR BUSINESS</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/805387038048612356">December 4, 2016</a></blockquote>
+          </div>
+          <p>This is the second major hurdle for tweet quality: uninteresting source material. These rants are scatterbrained and boring (usually), so the bank of source tweets needs to be trimmed to exclude them. Ignoring tweets that start with a lowercase letter or end in ".." is an effective, if inexact, way to avoid them.</p>
+          <p>Another issue is that <a href="http://www.varianceexplained.org/r/trump-tweets/" target="_blank">a large portion of Trump's tweets are not written by The Mad Tweeter himself</a>, but are penned by his staff</p>
+          <div class="tweets">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Thank you Alabama! From now on, it’s going to be <a href="https://twitter.com/hashtag/AmericaFirst?src=hash">#AmericaFirst</a>. Our goal is to bring back that wonderful phrase: <a href="https://twitter.com/hashtag/MadeInTheUSA?src=hash">#MadeInTheUSA</a>! <a href="https://t.co/O3RBYD2dT3">pic.twitter.com/O3RBYD2dT3</a></p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/810276411177107456">December 18, 2016</a></blockquote>
+          </div>
+          <p>Those are boring, of course, so they have to go.</p>
+          <!-- <p>Twitter lets you pull a maximum of 200 tweets per API call. At first, I let the bot analyze all 200 tweets in a Markov chain. The bot's tweets tended to be all over the place (not in the same way as the real Trump, though) and consistently rambled until it hit the 140 character limit. For example:</p>
+          <div class="tweets">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today there were terror attacks in Germany said today about Hillary focused on popular vote- and expand its nuclear capability until such</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/812874455596879873">December 25, 2016</a></blockquote>
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Bill Clinton stated that I have asked Boeing to get people like those who killed so many supporters, talking about airplane capability and</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/812875422585290752">December 25, 2016</a></blockquote>
+          </div>
+          <p>There are several problems with my initial approach. Firstly, using the full batch of 200 tweets causes common words to have many things in its neighbor list. Instead of a few coherent phrases mixed and matched, tweets are more like jumbles of single words from 100+ individual tweets. To combat this, I began picking 5 tweets at random from the 200 for the tweetbase.</p>
+
+          <p>Even after getting rid of those, however, there are issues. Unfortunately, The Donald's twitter etiquette leaves much to be desired:</p>
+
+          <p>Unlike most reasonable people, he regularly tweets extended rants as if he's Kanye West. This is a huge hurdle for the bot's tweet quality. The best way to weed out these rants is to not include tweets that don't start with a capital letter.</p> -->
+          <p>This tweet-slimming noticeably improves output:</p>
+          <div class="tweets">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I never learn! Bad reporter.</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/812881050229702656">December 25, 2016</a></blockquote>
+          </div>
+          <p>But even still, there is the occasional rambling:</p>
+          <div class="tweets">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I will be interviewed today on Fox News Sunday with The Apprentice except for fact that I will be interviewed today on Fox News Sunday with</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/813138565173571584">December 25, 2016</a></blockquote>
+          </div>
+          <p>This is because our word graph, <span class="snippet">wordCount</span>, contains cycles. Once the algorithm gets to "fact that" in the example above, it goes back to the same word that began the tweet, "I"</p>
+          <img class="diagram" src="images/word_graph.PNG">
+          <p>and we get the same phrase again. Cycles are not all bad, however. They can, in fact, produce some humorous tweets as well:</p>
+          <div class="tweets">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Merry Christmas and a very, very, it is true- Carlos Slim, it is true- Carlos Slim, HE IS A GREAT GUY!</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/813930378511663104">December 28, 2016</a></blockquote>
+          </div>
+        </section>
+        <section id="future">
+          <h1>Future Improvements</h1>
+          <p>Ideally, every tweet by <a href="https://www.twitter.com/AutomaTrump" target="_blank">@AutomaTrump</a> would by funny. This is very hard to accomplish consistently, as it turns out. The random nature of the Markov chain algorithm allows for both bland and hysterical output from the same source material. Furthermore, what's funny? And how can the humor of a tweet be measured?</p>
+          <p>Why is this funny?</p>
+          <div class="tweets">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Are we talking about Hillary on the pundits or commentators discussing the loss!</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/814130143086133248">December 28, 2016</a></blockquote>
+          </div>
+          <p>Whereas this falls flat?</p>
+          <div class="tweets">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If my many supporters acted and dealmaker. Stay tuned!</p>&mdash; Automa-Trump (@AutomaTrump) <a href="https://twitter.com/AutomaTrump/status/813943393923592196">December 28, 2016</a></blockquote>
+          </div>
+          <p>With a big enough following, the engagement data for each tweet could be used as a tweet quality metric. With that data, particularly funny phrases or source tweets could be machine learned and pulled from more frequently in the tweet synthesis process.</p>
+        </section>
+      </section>
+    </section>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA2KTN5lYwfgF8NSgJ3eXMhZk8OGxCQ_Jc",
+    authDomain: "portfolio-59959.firebaseapp.com",
+    databaseURL: "https://portfolio-59959.firebaseio.com",
+    storageBucket: "portfolio-59959.appspot.com",
+    messagingSenderId: "968038622169"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.scrolly.min.js"></script>
+<script src="js/scripts.js"></script>
+</html>
