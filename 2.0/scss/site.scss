@@ -11,6 +11,8 @@ $bodyFont: 18px Open Sans, sans-serif;
 
 //misc
 $center: 0 auto;
+$navHeight: 100px;
+$shadow: 0px 2px 10px rgba(0,0,0,.25);;
 
 //generic elements
 body{
@@ -19,6 +21,17 @@ body{
     color: $darkShade;
 
     margin: 0;
+}
+
+a{
+    color:$primaryColor;
+    text-decoration: none;
+
+    
+}
+
+a:hover{
+    //text-decoration: underline;
 }
 
 header{
@@ -30,9 +43,66 @@ header{
 }
 
 nav{
+    height: $navHeight;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: $shadow;
+    background-color: $darkShade;
+    color: $lightShade;
+
     ul{
+        list-style: none;
+        height: inherit;
+        margin: 0;
+        margin-left: 5%;
+        padding: 0;
+
         li{
-            display: inline;
+            height: $navHeight - 4;
+            position: relative;
+            float: left;
+            margin-right: 10px;
+
+            img{
+                height: 60px;
+                width: 60px;
+                border-radius: 0;
+                
+                display: block;
+                padding: 10px;
+            }
+
+            a,
+            a:focus{
+                color:$lightShade;
+                display: block;
+                padding: 39.5px 15px;
+            }
+            
+            :hover,
+            :active{
+                color:$primaryColor;
+            }
+        }
+
+        #nav-logo{
+            height: 80px;
+            width: 80px;
+            margin: 10px;
+            margin-right: 20px;
+            background: $lightShade;
+            border-radius: 50%;
+            box-shadow: $shadow;
+        }
+
+        .active{
+            border-bottom: 4px solid $primaryColor;
+
+            a,
+            a:focus{
+                color: $primaryColor;
+            }
         }
     }
 }
@@ -44,11 +114,15 @@ img{
 }
 
 //custom classes
+#main{
+    padding: 0 5%;
+    margin-top: $navHeight + 50px;
+}
+
 .row{
     height: 400px;
-    width: 90%;
-    margin: $center;
-    padding: 0 5%;
+    width: 104%;
+    margin: 0 -2%;
     
     .column{
         height: 100%;
@@ -67,3 +141,8 @@ img{
     }
 }
 
+#hello{
+    img{
+        box-shadow: $shadow;
+    }
+}
