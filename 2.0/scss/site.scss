@@ -1,0 +1,69 @@
+//colors
+$primaryColor: #FF5722;
+$lightShade: #ECF1ED;
+$lightAccent: #D3B076;
+$darkShade: #2A393E;
+$darkAccent: #827F85;
+
+//fonts
+$headerFont: 24px Hind, sans-serif;
+$bodyFont: 18px Open Sans, sans-serif;
+
+//misc
+$center: 0 auto;
+
+//generic elements
+body{
+    font: $bodyFont;
+    background-color: $lightShade;
+    color: $darkShade;
+
+    margin: 0;
+}
+
+header{
+    font: $headerFont;
+
+    h1{
+        font-weight: normal;
+    }
+}
+
+nav{
+    ul{
+        li{
+            display: inline;
+        }
+    }
+}
+
+img{
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+//custom classes
+.row{
+    height: 400px;
+    width: 90%;
+    margin: $center;
+    padding: 0 5%;
+    
+    .column{
+        height: 100%;
+        width: 28%;
+        margin: 0 2%;
+        position: relative;
+        float: left;
+    }
+
+    .column--two{
+        height: 100%;
+        width: 64%;
+        margin: 0 2%;
+        position: relative;
+        float: left;
+    }
+}
+

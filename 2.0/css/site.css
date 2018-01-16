@@ -1,0 +1,38 @@
+body {
+  font: 18px Open Sans, sans-serif;
+  background-color: #ECF1ED;
+  color: #2A393E;
+  margin: 0; }
+
+header {
+  font: 24px Hind, sans-serif; }
+  header h1 {
+    font-weight: normal; }
+
+nav ul li {
+  display: inline; }
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 50%; }
+
+.row {
+  height: 400px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 5%; }
+  .row .column {
+    height: 100%;
+    width: 28%;
+    margin: 0 2%;
+    position: relative;
+    float: left; }
+  .row .column--two {
+    height: 100%;
+    width: 64%;
+    margin: 0 2%;
+    position: relative;
+    float: left; }
+
+/*# sourceMappingURL=site.css.map */
