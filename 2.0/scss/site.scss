@@ -4,34 +4,46 @@ $lightShade: #ECF1ED;
 $lightAccent: #D3B076;
 $darkShade: #2A393E;
 $darkAccent: #827F85;
+$superDark: #161d1f;
 
 //fonts
-$headerFont: 24px Hind, sans-serif;
-$bodyFont: 18px Open Sans, sans-serif;
+$headerFont: 52px Hind, sans-serif;
+$midHeader: 28px Hind, sans-serif;
+$midFont: 22px Open Sans, sans-serif;
+$smallFont: 18px Open Sans, sans-serif;
 
 //misc
 $center: 0 auto;
-$navHeight: 100px;
-$shadow: 0px 2px 10px rgba(0,0,0,.25);;
+$navHeight: 80px;
+$roundedCorner: 4px;
+$baseShadow: 0px 2px 4px rgba(0,0,0,.25);
+$highShadow: 0px 2px 16px rgba(0,0,0,.25);
+$transitionLength: .3s;
 
 //generic elements
 body{
-    font: $bodyFont;
+    font: $midFont;
     background-color: $lightShade;
     color: $darkShade;
 
     margin: 0;
 }
 
+section{
+    padding: 50px 5%;
+}
+
 a{
     color:$primaryColor;
     text-decoration: none;
-
-    
 }
 
 a:hover{
     //text-decoration: underline;
+}
+
+p{
+    margin-top: 0;
 }
 
 header{
@@ -39,30 +51,35 @@ header{
 
     h1{
         font-weight: normal;
+        margin: 0;
     }
 }
 
 nav{
     height: $navHeight;
-    width: 100%;
+    width: 90%;
     position: fixed;
     top: 0;
-    box-shadow: $shadow;
-    background-color: $darkShade;
+    font: $smallFont;    
+    background-color: $superDark;
     color: $lightShade;
+    box-shadow: $baseShadow;
+    padding: 0 5%;
+    z-index: 99;
 
-    ul{
-        list-style: none;
+    .row{
         height: inherit;
-        margin: 0;
-        margin-left: 5%;
+        min-height: 0;
+        // margin: 0;
+        // margin-left: 3%;
         padding: 0;
 
-        li{
+        .column,
+        .column--three{
             height: $navHeight - 4;
-            position: relative;
-            float: left;
-            margin-right: 10px;
+            // position: relative;
+            // float: left;
+            // margin-right: 10px;
 
             img{
                 height: 60px;
@@ -75,14 +92,14 @@ nav{
 
             a,
             a:focus{
-                color:$lightShade;
-                display: block;
-                padding: 39.5px 15px;
+                color: $lightShade;
+                display: inline-block;
+                padding: 28px 15px 24px 15px;
             }
             
             :hover,
             :active{
-                color:$primaryColor;
+                color: $primaryColor;
             }
         }
 
@@ -93,7 +110,7 @@ nav{
             margin-right: 20px;
             background: $lightShade;
             border-radius: 50%;
-            box-shadow: $shadow;
+            box-shadow: $baseShadow;
         }
 
         .active{
@@ -115,34 +132,154 @@ img{
 
 //custom classes
 #main{
-    padding: 0 5%;
+    
+    padding: 0; 
     margin-top: $navHeight + 50px;
 }
 
 .row{
-    height: 400px;
+    height: auto;
     width: 104%;
-    margin: 0 -2%;
+    min-height: 400px;
+    max-width: 1400px;
+    overflow: auto;
+    margin: 0 auto;
     
-    .column{
-        height: 100%;
-        width: 28%;
-        margin: 0 2%;
+    .column,
+    .column--two,
+    .column--three{
+        display: block;
         position: relative;
         float: left;
+        margin: 0 2.5%;
     }
 
+    .column{
+        width: 20%;
+    }
     .column--two{
-        height: 100%;
-        width: 64%;
-        margin: 0 2%;
-        position: relative;
-        float: left;
+        width: 45%;
+    }
+
+    .column--three{
+        width: 70%;
+    }
+}
+
+.card{
+    background: $lightShade;
+    color: $darkShade;
+    font: $smallFont;
+    border-radius: $roundedCorner;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: $baseShadow;
+
+    img{
+        height: auto;
+        width: 100%;
+        max-height: none;
+        display: block;
+        border-radius: $roundedCorner;
+        //margin: -20px;
+        
+    }
+}
+
+.imagecard{
+    padding: 0;
+}
+
+.contents{
+    font: $midHeader;
+
+    h1{
+        margin-top: 20px;
     }
 }
 
 #hello{
     img{
-        box-shadow: $shadow;
+        box-shadow: $baseShadow;
+    }
+}
+
+#work{
+    background: $darkShade;
+    
+    .contents{
+        background-color: $darkShade;
+        color: $lightShade;
+    }
+}
+
+.small{
+    font-variant: small-caps;
+}
+
+.button{
+    display: inline-block;
+    background: $primaryColor;
+    color: $lightShade;
+    border-radius: $roundedCorner;
+    font-variant: small-caps;
+    box-shadow: $baseShadow;
+    padding: 10px 20px;
+    margin-right: 5px;
+    transition: box-shadow $transitionLength;
+}
+
+.button:hover{
+    box-shadow: $highShadow;
+}
+
+.button.accent{
+    background-color: $lightAccent;
+}
+
+.timeline{
+    padding: 10px;
+}
+
+.twitter-timeline{
+    min-width: 0 !important;
+    // box-shadow: $baseShadow;
+    // margin: 20px 0 !important;
+}
+
+//@media
+@media (max-width: 1500px){
+    .row{
+        margin: 0 -2%;
+    }
+}
+
+@media (max-width: 786px){
+    nav{
+        .row{
+            .column{
+                width: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    #main{
+        .row{
+            height: auto;
+        
+            .column,
+            .column--two,
+            .column--three{
+                height: auto;
+                width: 96%;
+                
+
+                img{
+                    margin: $center;
+                    display: block;
+                }
+            }
+        }
     }
 }

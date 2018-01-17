@@ -3,10 +3,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="canonical" href="https://chrisbell.io" />
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        
         <link rel="stylesheet" href="css/site.css">
-        <link rel="stylesheet" href="fonts/Hind-Regular.ttf"/>
-        <link rel="stylesheet" href="fonts/Hind-Bold.ttf"/>
-        <link rel="stylesheet" href="fonts/OpenSans-Regular.ttf"/>
+        <link href="https://fonts.googleapis.com/css?family=Hind|Open+Sans" rel="stylesheet">
+
 
         <!-- Google Analytics -->
         <!-- <script>
@@ -23,14 +23,17 @@
     </head>
     <body>
         <nav id="top-nav">
-            <ul id="nav-bar">
-                <li id="nav-logo"><img src="images/logo.svg"></li>
-                <li id="home" class="active"><a class="scrolly" href="#main">Home</a></li>
-                <li id="projects"><a href="#portfolio" class="scrolly">Projects</a></li>
-                
-                <li><a href="resume.html">R&eacute;sum&eacute;</a></li>
-                <li id="contact_me"><a class="scrolly" href="#contact">Contact</a></li>
-            </ul>
+            <div class="row">
+                <div class="column">
+                    <!-- <img id="nav-logo" src="images/logo.svg"> -->
+                </div>
+                <div class="column--three">
+                    <a id="home" class="scrolly active" href="#main">Home</a>
+                    <a id="projects" href="#portfolio" class="scrolly">My Work</a>
+                    <a href="resume.html">Experience</a>
+                    <a id="contact_me" class="scrolly" href="#contact">Contact</a>
+                </div>
+            </div>
         </nav>
         <section id="main">
             <section id="hello">
@@ -38,12 +41,38 @@
                     <div class="column">
                         <img src="images/my_face.png">
                     </div>
-                    <div class="column--two">
+                    <div class="column--three">
                         <header>
                             <h1>Hi, I'm <strong>Chris Bell</strong>.</h1>
                         </header>
-                        <p>I'm a software engineer and web developer based in Madison, <span class="small">WI</span>.</p>
-                        <a href="#skillz" class="btn btn-lg scrolly">Learn about what I do</a>
+                        <p>I'm a software engineer and web developer based in Madison, <span class="small">WI</span>. My passion is creating effective, beautiful solutions that bring your business to the front of the pack. With meticulous attention to detail, I will work with you to create a product that both you and your customers will love.</p>
+                        <a href="#skillz" class="button">Learn about what I do</a>
+                    </div>
+                </div>
+            </section>
+            <section id="work">
+                <div class="row">
+                    <div class="column contents">
+                        <h1>Automa-Trump</h1>
+                    </div>
+                    <div class="column--two">
+                        <div class="card imagecard">
+                            <img src="images/AutomaTrumpScreen.png" />
+                        </div>
+                        <div class="card">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <a class="button" href="">Read More</a>
+                            <a class="button accent" href="">View Timeline</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card timeline">
+                            <a class="twitter-timeline" data-width="280" data-height="500" data-link-color="#FF5722" 
+                            data-chrome="transparent nofooter"
+                            href="https://twitter.com/AutomaTrump?ref_src=twsrc%5Etfw">Tweets by AutomaTrump</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
                     </div>
                 </div>
             </section>
