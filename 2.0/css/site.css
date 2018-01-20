@@ -19,6 +19,10 @@ header {
   header h1 {
     font-weight: normal;
     margin: 0; }
+  header h3 {
+    font: 24px Hind, sans-serif;
+    color: #2A393E;
+    margin: 0; }
 
 nav {
   height: 80px;
@@ -28,7 +32,7 @@ nav {
   font: 18px Open Sans, sans-serif;
   background-color: #161d1f;
   color: #ECF1ED;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
   padding: 0 5%;
   z-index: 99; }
   nav .row {
@@ -64,7 +68,7 @@ nav {
       margin-right: 20px;
       background: #ECF1ED;
       border-radius: 50%;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); }
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25); }
     nav .row .active {
       border-bottom: 4px solid #FF5722; }
       nav .row .active a,
@@ -108,29 +112,47 @@ img {
   border-radius: 4px;
   margin: 20px 0;
   padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); }
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25); }
   .card img {
     height: auto;
     width: 100%;
     max-height: none;
     display: block;
-    border-radius: 4px; }
+    border-radius: 4px;
+    margin-top: -100px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25); }
 
 .imagecard {
-  padding: 0; }
+  background: transparent;
+  padding: 0;
+  box-shadow: none; }
+  .imagecard img {
+    margin: 0;
+    box-shadow: none; }
+
+.cardWithImage {
+  margin-top: 100px; }
 
 .contents {
   font: 28px Hind, sans-serif; }
   .contents h1 {
     margin-top: 20px; }
 
+.caption {
+  display: block;
+  font: 24px Hind, sans-serif;
+  font-variant: small-caps;
+  color: #2A393E;
+  margin: 10px 0; }
+
 #hello img {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); }
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25); }
 
 #work {
   background: #2A393E; }
   #work .contents {
-    background-color: #2A393E;
+    background: #2A393E;
     color: #ECF1ED; }
 
 .small {
@@ -142,13 +164,13 @@ img {
   color: #ECF1ED;
   border-radius: 4px;
   font-variant: small-caps;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
   padding: 10px 20px;
   margin-right: 5px;
   transition: box-shadow 0.3s; }
 
 .button:hover {
-  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25); }
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25); }
 
 .button.accent {
   background-color: #D3B076; }
@@ -158,6 +180,10 @@ img {
 
 .twitter-timeline {
   min-width: 0 !important; }
+
+#gdusa {
+  background: #ECF1ED;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25); }
 
 @media (max-width: 1500px) {
   .row {
