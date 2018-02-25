@@ -14,9 +14,15 @@ $midFont: 22px Open Sans, sans-serif;
 $smallFont: 18px Open Sans, sans-serif;
 $tinyFont: 16px Open Sans, sans-serif;
 
+//mobile fonts
+$mobileHeader : 36px Hind, sans-serif;
+//$mobilemidFont: 1px Open Sans, sans-serif;
+
 //misc
 $center: 0 auto;
 $navHeight: 80px;
+$contentsMargin: 20px;
+$mobileNavHeight: 60px;
 $roundedCorner: 4px;
 $baseShadow: 0px 2px 6px rgba(0,0,0,.25);
 $highShadow: 0px 2px 20px rgba(0,0,0,.25);
@@ -92,23 +98,33 @@ nav{
             img{
                 height: 60px;
                 width: 60px;
-                border-radius: 0;
-                
-                display: block;
-                padding: 10px;
+                //border-radius: 0;
+                float: left;
+                //display: block;
+                margin-top: 10px;
             }
 
+            span,
             a,
             a:focus{
                 color: $lightShade;
                 display: inline-block;
                 padding: 28px 15px 24px 15px;
-            }
+            }            
             
             :hover,
             :active{
                 color: $primaryColor;
             }
+        }
+
+        .column{
+            top: $navHeight * -1;
+            transition: top .5s ease-out;
+        }
+
+        .column.scrolled{
+            top: 0;
         }
 
         #nav-logo{
@@ -225,6 +241,18 @@ img{
     .caption{
         margin-top: 0;
     }
+}
+
+.sticky{
+    position: fixed;
+    display: block;
+    top: $navHeight + $contentsMargin;
+    transition: all .2s ease-out;
+}
+
+.sticky.scrolled{
+    //opacity: 0;
+    top:0;
 }
 
 .caption{
@@ -512,28 +540,21 @@ img{
     }
 }
 
-@media (max-width: 786px){
+//iPad
+
+@media (max-width: 768px){
+    
     nav{
-        width: 100%;
-        padding: 0;
         .row{
             .column{
-                width: 0;
-                margin: 0;
-            }
-            .column--three{
-                width: 100%;
-
-                a{
-                    padding-left: 5px;
-                    padding-right: 5px;
-                }
+                display: none;
             }
         }
     }
+    
 
     #main{
-        
+        margin-top: 80px;
         padding: 0;
         .row{
             height: auto;
@@ -553,9 +574,46 @@ img{
         }
     }
 
+    #hello{
+        .row{
+            .column{
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    #work{
+
+        header{
+            .caption{
+                font: $mobileHeader;
+            }
+        }
+        .contents{
+            display: none;
+        }
+
+        .timeline{
+            display: none;
+        }
+
+        .imageCard{
+            display: none;
+        }
+
+        .row{
+            .card{
+                img{
+                    margin-top: -100px;
+                }
+            }
+        }
+    }
+    
+
     #contact{
         ul.social{
-            width: 300px;
+            //width: 300px;
             margin-bottom: 60px;
         }
     
@@ -566,9 +624,51 @@ img{
     
         ul.social > li > a,
         ul.social > li > a::before{
-            width: 32px;
+            //width: 32px;
             height: 32px;
             line-height: 32px;
+        }
+    }
+}
+
+//iPhone 8 Plus and below
+@media (max-width: 414px){
+    body{
+        font: $smallFont;
+    }
+
+    .row{
+        width: 100%;
+        margin: $center;
+
+        .column,
+        .column--two,
+        .column--three{
+            margin: $center;
+        }
+
+    }
+
+    nav{
+        height: $mobileNavHeight;
+        width: 100%;
+        font: $tinyFont;
+        padding: 0 5%;
+
+        .row{
+            .column{
+                display: none;
+            }
+            .column--three{
+                height: auto;
+                width: auto;
+                margin: $center;
+                float: none;
+
+                a{
+                    padding: 19px 4px 15px 4px;
+                }
+            }
         }
     }
 }
