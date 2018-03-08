@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="canonical" href="https://chrisbell.io" />
@@ -7,11 +8,18 @@
         <link rel="stylesheet" href="css/site.css">
         <link href="https://fonts.googleapis.com/css?family=Hind|Open+Sans" rel="stylesheet">
 
-        
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="images/favicon/favicon.ico">
+        <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
 
 
         <!-- Google Analytics -->
-        <!-- <script>
+        <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -19,7 +27,7 @@
         
             ga('create', 'UA-88114300-1', 'auto');
             ga('send', 'pageview');    
-        </script> -->
+        </script>
         <!-- End Google Analytics -->
         <title>Chris Bell</title>
     </head>
@@ -32,8 +40,8 @@
                 </div>
                 <div class="column--three">
                     <a id="home" class="scrolly active" href="#main">Home</a>
-                    <a id="projects" href="#portfolio" class="scrolly">My Work</a>
-                    <a href="resume.html">Experience</a>
+                    <a id="projects" href="#work" class="scrolly">My Work</a>
+                    <a href="#experience">Experience</a>
                     <!-- <a href="resume.html">Skills</a> -->
                     <a id="contact_me" class="scrolly" href="#contact">Contact</a>
                 </div>
@@ -50,7 +58,7 @@
                             <h1>Hi, I'm <strong>Chris Bell</strong>.</h1>
                         </header>
                         <p>I'm a software engineer and web developer based in Madison, <span class="small">WI</span>. My passion is creating effective, beautiful solutions that bring your business to the front of the pack. With meticulous attention to detail, I will work with you to create a product that both you and your customers will love.</p>
-                        <a href="#skillz" class="button">Learn about what I do</a>
+                        <a href="#work" class="button scrolly">Learn about what I do</a>
                     </div>
                 </div>
             </section>
@@ -61,19 +69,16 @@
                         &nbsp;
                     </div>
                     <div class="column--two">
-                        <!-- <div class="card imagecard">
-                            <img src="images/AutomaTrumpScreen.png" />
-                        </div> -->
                         <div class="card cardWithImage">
                             <img src="images/AutomaTrumpScreen.png" />
                             <header>
                                 <span class="caption">Automa-Trump</span>
                             </header>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Automa-Trump is a twitter bot that procedurally generates Trump-like tweets using Markov chains. It was created mainly for fun, but developed into an exercie in heuristics and soon, machine learning.
                             </p>
-                            <a class="button" href="">Read More</a>
-                            <a class="button accent" href="">View Timeline</a>
+                            <a class="button" href="AutomaTrump.html">Read More</a>
+                            <a class="button accent" href="https://twitter.com/AutomaTrump" target="_blank">View Timeline</a>
                         </div>
                     </div>
                     <div class="column">
@@ -89,14 +94,7 @@
                         <h1>SCGcorp.com</h1>
                         &nbsp;
                     </div>
-                    <div class="column">
-                        <div id="gdusa" class="card imagecard">
-                            <img  src="images/GDUSA.png" />
-                        </div>
-                        <!-- <div class="card imagecard">
-                            <img src="images/SCG-site-mobile.png" />
-                        </div> -->
-                    </div>
+                    
                     <div class="column--two">
                         <div class="card cardWithImage">
                             <img src="images/SCG-site-desktop.png" />
@@ -104,25 +102,22 @@
                                 <span class="caption">SCGcorp.com</span>
                             </header>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                While working at SCG, I was given the opportunity to redesign the company website. I worked directly with the CEO and other executives to iteratively create a solution that would reflect the company's breadth and depth of expertise. Shortly after its launch the site received the 2017 Web Design Award from GDUSA. 
                             </p>
-                            <a class="button" href="">Visit SCGcorp.com</a>
+                            <a class="button" href="https://www.scgcorp.com/" target="_blank">Visit SCGcorp.com</a>
                         </div>
-                    </div>                    
+                    </div>
+                    <div class="column">
+                        <div id="gdusa" class="card imagecard">
+                            <img  src="images/GDUSA.png" />
+                        </div>
+                    </div>           
                 </div>
                 <div id="NIH" class="row">
                     <div class="column contents">
                         <h1>NIH Pi Day Festival</h1>
                         &nbsp;
                     </div>
-                    <!-- <div class="column">
-                        <div id="gdusa" class="card imagecard">
-                            <img  src="images/GDUSA.png" />
-                        </div>
-                        <div class="card imagecard">
-                            <img src="images/SCG-site-mobile.png" />
-                        </div>
-                    </div> -->
                     <div class="column--three">
                         <div class="card cardWithImage">
                             <img src="images/Pi-Day.png" />
@@ -130,14 +125,14 @@
                                 <span class="caption">NIH Pi Day Festival</span>
                             </header>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                One of my first projects while at SCG was for the NIH's 2017 Pi Day Festival. The NIH wanted to appeal to a younger audience with a more modern, mobile-friendly solution on a very tight timetable. I was able to devote myself to the project entirely and meet their deadline while exceeding their design expectations. The product itself was rather small, providing information on the events and scheduling of the festival.
                             </p>
-                            <a class="button" href="">Visit Archive</a>
+                            <a class="button" href="https://web.archive.org/web/20170308183027/https://nihpiday.nih.gov/" target="_blank">Visit Archive</a>
                         </div>
                     </div>                    
                 </div>
             </section>
-            <section class="experience">
+            <section id="experience">
                 <div class="row">
                     <div class="column contents">
                         <h1>Practice Velocity</h1>
@@ -146,10 +141,8 @@
                     <div class="column--two">
                         <div class="card">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Working at PV was my first experience working on a large-scale application. Desktop development was also new for me; even though .NET development was familiar, both WPF and WinForms were new to me. Development at PV is done in a mature scrum environment with buy-in from top to bottom. 
                             </p>
-                            <a class="button" href="">Read More</a>
-                            <a class="button accent" href="">View Timeline</a>
                         </div>
                     </div>
                     <div class="column">
@@ -157,6 +150,12 @@
                             <header>
                                 <span class="caption">Skills Developed</span>
                             </header>
+                            <ul>
+                                <li>C# 6</li>
+                                <li>SQL</li>
+                                <li>Architecture</li>
+                                <li>Teamwork</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -168,10 +167,8 @@
                     <div class="column--two">
                         <div class="card">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                At SCG, I did design, development, and support for numerous mid-scale, public-facing and enterprise .NET web applications. The work done was all contract-based with a wide spectrum of requirements and scope. Unlike PV, the development was not very team-oriented, so I had much more influence on the projects I worked on. On a few projects I managed the developers doing the coding rather than writing the code myself.
                             </p>
-                            <a class="button" href="">Read More</a>
-                            <a class="button accent" href="">View Timeline</a>
                         </div>
                     </div>
                     <div class="column">
@@ -179,6 +176,12 @@
                             <header>
                                 <span class="caption">Skills Developed</span>
                             </header>
+                            <ul>
+                                <li>C#</li>
+                                <li>JavaScript, React.JS</li>
+                                <li>CSS 3</li>
+                                <li>Management</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -190,10 +193,8 @@
                     <div class="column--two">
                         <div class="card">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Workshops are a substitution for the traditional recitation model that the University is very proud of. The idea is to increase student engagement by allowing them to take an active role in their learning rather than a passive one. Students spend all of their time in workshops in groups with other students rather than being lectured to by a TA. As a workshop leader, it was my job to facilitate these interactions; it was not my job to teach them the material. I would instead act as a guide through the weekly problems, providing clues when needed and encouraging quieter students to participate. In my third semester as a workshop leader I assumed a lead role for an introductory programming class. In addition to my normal workshop leader duties, I assisted newer workshop leaders with keeping their workshops healthy and productive.
                             </p>
-                            <a class="button" href="">Read More</a>
-                            <a class="button accent" href="">View Timeline</a>
                         </div>
                     </div>
                     <div class="column">
@@ -201,31 +202,14 @@
                             <header>
                                 <span class="caption">Skills Developed</span>
                             </header>
+                            <ul>
+                                <li>Teamwork</li>
+                                <li>Management</li>
+                                <li>Elocution</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                        <div class="column contents">
-                            <h1>University of Rochester</h1>
-                            <span class="caption">B.A. - Computer Science</span>
-                        </div>
-                        <div class="column--two">
-                            <div class="card">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                                <a class="button" href="">Read More</a>
-                                <a class="button accent" href="">View Timeline</a>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <header>
-                                    <span class="caption">Skills Developed</span>
-                                </header>
-                            </div>
-                        </div>
-                    </div>
             </section>
             <section id="contact">
                 <header>

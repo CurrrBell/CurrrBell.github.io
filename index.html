@@ -1,214 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://chrisbell.io" />
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="canonical" href="https://chrisbell.io" />
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="css/site.css">
+        <link href="https://fonts.googleapis.com/css?family=Hind|Open+Sans" rel="stylesheet">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="images/favicon/favicon.ico">
+        <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
 
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="images/favicon/manifest.json">
-  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="images/favicon/favicon.ico">
-  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Google Analytics -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-88114300-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-  <!-- End Google Analytics -->
-  <title>Chris Bell</title>
-</head>
-<body>
-  <nav id="top-nav">
-    <ul id="nav-bar">
-      <li id="home" class="active"><a class="scrolly" href="#main">Home</a></li>
-      <li id="projects"><a href="#portfolio" class="scrolly">Projects</a></li>
-      <li id="nav-logo"><img src="images/logo.svg"></li>
-      <li><a href="resume.html">R&eacute;sum&eacute;</a></li>
-      <li id="contact_me"><a class="scrolly" href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <div id="loading">
-    <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
-    <span class="sr-only">Loading...</span>
-  </div>
-  <div id="main">
-    <section id="hello">
-      <div class="content-wrapper">
-        <div class="row">
-          <div class="col-sm-4">
-            <img src="images/my_face.png">
-          </div>
-          <div class="col-sm-8">
-            <header>
-              <h1>Hi, I'm <strong>Chris Bell</strong>.</h1>
-            </header>
-            <p>I'm a software engineer and web developer based in Madison, <span class="small">WI</span>.</p>
-            <a href="#skillz" class="btn btn-lg scrolly">Learn about what I do</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="skillz">
-      <div class="content-wrapper">
-        <header>
-          <h1>Some stuff I do</h1>
-        </header>
-        <div class="row">
-          <div class="col-sm-3">
-            <i class="fa fa-headphones fa-featured" aria-hidden="true"></i>
-            <p>I experiment a lot in FL Studio and occasionally post the results. Take a listen and leave me a mean comment.</p>
-            <a class="btn">Check out my Soundcloud</a>
-          </div>
-          <div class="col-sm-3">
-            <i class="fa fa-code fa-featured" aria-hidden="true"></i>
-            <p>Writing code is something I'm actually good at (unlike music) and is how I make my living.</p>
-            <a href="#portfolio" class="btn scrolly">See some of my recent work</a>
-          </div>
-          <div class="col-sm-3">
-            <i class="fa fa-gamepad fa-featured" aria-hidden="true"></i>
-            <p>I stream video games on twitch. I'm no pro, but you'll be entertained!</p>
-            <a href="https://www.twitch.tv/CurrrBell" target="_blank" class="btn">Come hang out</a>
-          </div>
-        </div>
-        <hr>
-      </div>
-    </section>
-    <section id="portfolio">
-      <div class="content-wrapper">
-        <header>
-          <h1>Stuff I've done recently</h1>
-        </header>
-        <div class="row">
-          <div class="col-sm-6">
-            <img src="images/SCG.png" class="project-display">
-            <div class="caption">
-              <h3><a href="https://www.scgcorp.com/" target="_blank">The Scientific Consulting Group</a></h3>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <img src="images/Automa-Trump.png" class="project-display">
-            <div class="caption">
-              <h3><a href="https://twitter.com/AutomaTrump" target="_blank">Automa-Trump</a></h3>
-              <h4><a href="AutomaTrump.html">How it works</a></h4>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6">
-            <img src="images/phone_shot.png" class="project-display">
-            <div class="caption">
-              <h3>myDeclining iOS app</h3>
-              <h4>Coming soon</h4>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <img src="images/Pi-Day.png" class="project-display">
-            <div class="caption">
-              <h3><a href="https://nihpiday.nih.gov/" target="_blank">NIH Pi Day</a></h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <div class="content-wrapper">
-        <header>
-          <h1>Get in touch with me</h1>
-        </header>
-        <form id="message-form">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="row">
-                <div class="col-xs-6">
-                  <input type="text" name="name" id="name" placeholder="Name">
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        
+            ga('create', 'UA-88114300-1', 'auto');
+            ga('send', 'pageview');    
+        </script>
+        <!-- End Google Analytics -->
+        <title>Chris Bell</title>
+    </head>
+    <body>
+        <nav id="top-nav">
+            <div class="row">
+                <div class="column">
+                    <img src="images/my_face.png"/>
+                    <span>Chris Bell</span>
                 </div>
-                <div class="col-xs-6">
-                  <input type="text" name="email" id="email" placeholder="Email">
+                <div class="column--three">
+                    <a id="home" class="scrolly active" href="#main">Home</a>
+                    <a id="projects" href="#work" class="scrolly">My Work</a>
+                    <a href="#experience">Experience</a>
+                    <!-- <a href="resume.html">Skills</a> -->
+                    <a id="contact_me" class="scrolly" href="#contact">Contact</a>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-12">
-                  <input type="text" name="subject" id="subject" placeholder="Subject">
+            </div>
+        </nav>
+        <section id="main">
+            <section id="hello">
+                <div class="row">
+                    <div class="column">
+                        <img src="images/my_face.png">
+                    </div>
+                    <div class="column--three">
+                        <header>
+                            <h1>Hi, I'm <strong>Chris Bell</strong>.</h1>
+                        </header>
+                        <p>I'm a software engineer and web developer based in Madison, <span class="small">WI</span>. My passion is creating effective, beautiful solutions that bring your business to the front of the pack. With meticulous attention to detail, I will work with you to create a product that both you and your customers will love.</p>
+                        <a href="#work" class="button scrolly">Learn about what I do</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <textarea type="text" name="message" id="message" placeholder="Message"></textarea>
-            </div>
-          </div>
-          <!-- <div class="row">
-            <div class="col-sm-12">
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-
-            </div>
-          </div> -->
-          <div class="row form-buttons">
-            <div class="col-sm-6">
-              <a class="btn" id="submit">Send Message</a>
-            </div>
-            <div class="col-sm-6">
-              <input type="reset" value="Clear Form" class="alt">
-            </div>
-          </div>
-        </form>
-        <hr>
-        <h1>Find me on</h1>
-        <ul class="social">
-          <li><a href="https://github.com/CurrrBell" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
-          <li><a href="https://www.linkedin.com/in/currrbell" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://twitter.com/CurrrBell" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="https://www.instagram.com/currrbell/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="https://www.facebook.com/chris.bell.33865" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<!-- <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li> -->
-          <li><a href="https://soundcloud.com/currrbell" target="_blank" class="icon fa-soundcloud"><span class="label">Soundcloud</span></a></li>
-				</ul>
-        <hr>
-      </div>
-    </section>
-    <div id="copy">
-      <span>&copy; Chris Bell - All rights reserved</span>
-    </div>
-  </div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA2KTN5lYwfgF8NSgJ3eXMhZk8OGxCQ_Jc",
-    authDomain: "portfolio-59959.firebaseapp.com",
-    databaseURL: "https://portfolio-59959.firebaseio.com",
-    storageBucket: "portfolio-59959.appspot.com",
-    messagingSenderId: "968038622169"
-  };
-  firebase.initializeApp(config);
-</script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.scrolly.min.js"></script>
-<script src="js/script.js"></script>
-<script src="js/index.js"></script>
+            </section>
+            <section id="work">
+                <div id="trump" class="row">
+                    <div class="column contents">                        
+                        <h1>Automa-Trump</h1>
+                        &nbsp;
+                    </div>
+                    <div class="column--two">
+                        <div class="card cardWithImage">
+                            <img src="images/AutomaTrumpScreen.png" />
+                            <header>
+                                <span class="caption">Automa-Trump</span>
+                            </header>
+                            <p>
+                                Automa-Trump is a twitter bot that procedurally generates Trump-like tweets using Markov chains. It was created mainly for fun, but developed into an exercie in heuristics and soon, machine learning.
+                            </p>
+                            <a class="button" href="AutomaTrump.html">Read More</a>
+                            <a class="button accent" href="https://twitter.com/AutomaTrump" target="_blank">View Timeline</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card timeline">
+                            <a class="twitter-timeline" data-width="280" data-height="500" data-link-color="#FF5722" 
+                            data-chrome="transparent nofooter"
+                            href="https://twitter.com/AutomaTrump?ref_src=twsrc%5Etfw">Tweets by AutomaTrump</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </div>
+                </div>
+                <div id="SCG" class="row">
+                    <div class="column contents">
+                        <h1>SCGcorp.com</h1>
+                        &nbsp;
+                    </div>
+                    
+                    <div class="column--two">
+                        <div class="card cardWithImage">
+                            <img src="images/SCG-site-desktop.png" />
+                            <header>
+                                <span class="caption">SCGcorp.com</span>
+                            </header>
+                            <p>
+                                While working at SCG, I was given the opportunity to redesign the company website. I worked directly with the CEO and other executives to iteratively create a solution that would reflect the company's breadth and depth of expertise. Shortly after its launch the site received the 2017 Web Design Award from GDUSA. 
+                            </p>
+                            <a class="button" href="https://www.scgcorp.com/" target="_blank">Visit SCGcorp.com</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div id="gdusa" class="card imagecard">
+                            <img  src="images/GDUSA.png" />
+                        </div>
+                    </div>           
+                </div>
+                <div id="NIH" class="row">
+                    <div class="column contents">
+                        <h1>NIH Pi Day Festival</h1>
+                        &nbsp;
+                    </div>
+                    <div class="column--three">
+                        <div class="card cardWithImage">
+                            <img src="images/Pi-Day.png" />
+                            <header>
+                                <span class="caption">NIH Pi Day Festival</span>
+                            </header>
+                            <p>
+                                One of my first projects while at SCG was for the NIH's 2017 Pi Day Festival. The NIH wanted to appeal to a younger audience with a more modern, mobile-friendly solution on a very tight timetable. I was able to devote myself to the project entirely and meet their deadline while exceeding their design expectations. The product itself was rather small, providing information on the events and scheduling of the festival.
+                            </p>
+                            <a class="button" href="https://web.archive.org/web/20170308183027/https://nihpiday.nih.gov/" target="_blank">Visit Archive</a>
+                        </div>
+                    </div>                    
+                </div>
+            </section>
+            <section id="experience">
+                <div class="row">
+                    <div class="column contents">
+                        <h1>Practice Velocity</h1>
+                        <span class="caption">Software Engineer</span>
+                    </div>
+                    <div class="column--two">
+                        <div class="card">
+                            <p>
+                                Working at PV was my first experience working on a large-scale application. Desktop development was also new for me; even though .NET development was familiar, both WPF and WinForms were new to me. Development at PV is done in a mature scrum environment with buy-in from top to bottom. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <header>
+                                <span class="caption">Skills Developed</span>
+                            </header>
+                            <ul>
+                                <li>C# 6</li>
+                                <li>SQL</li>
+                                <li>Architecture</li>
+                                <li>Teamwork</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column contents">
+                        <h1>SCG</h1>
+                        <span class="caption">Web Developer</span>
+                    </div>
+                    <div class="column--two">
+                        <div class="card">
+                            <p>
+                                At SCG, I did design, development, and support for numerous mid-scale, public-facing and enterprise .NET web applications. The work done was all contract-based with a wide spectrum of requirements and scope. Unlike PV, the development was not very team-oriented, so I had much more influence on the projects I worked on. On a few projects I managed the developers doing the coding rather than writing the code myself.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <header>
+                                <span class="caption">Skills Developed</span>
+                            </header>
+                            <ul>
+                                <li>C#</li>
+                                <li>JavaScript, React.JS</li>
+                                <li>CSS 3</li>
+                                <li>Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column contents">
+                        <h1>University of Rochester</h1>
+                        <span class="caption">Lead Workshop Leader</span>
+                    </div>
+                    <div class="column--two">
+                        <div class="card">
+                            <p>
+                                Workshops are a substitution for the traditional recitation model that the University is very proud of. The idea is to increase student engagement by allowing them to take an active role in their learning rather than a passive one. Students spend all of their time in workshops in groups with other students rather than being lectured to by a TA. As a workshop leader, it was my job to facilitate these interactions; it was not my job to teach them the material. I would instead act as a guide through the weekly problems, providing clues when needed and encouraging quieter students to participate. In my third semester as a workshop leader I assumed a lead role for an introductory programming class. In addition to my normal workshop leader duties, I assisted newer workshop leaders with keeping their workshops healthy and productive.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <header>
+                                <span class="caption">Skills Developed</span>
+                            </header>
+                            <ul>
+                                <li>Teamwork</li>
+                                <li>Management</li>
+                                <li>Elocution</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <header>
+                    <h1>Get in touch with me</h1>
+                </header>
+                <form id="message-form">
+                    <div class="row">
+                        <div class="column--two">
+                            <div class="row">
+                                <div class="column--two">
+                                    <input type="text" name="name" id="name" placeholder="Name">
+                                </div>
+                                <div class="column--two">
+                                    <input type="text" name="email" id="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column--two">
+                            <textarea type="text" name="message" id="message" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row form-buttons">
+                        
+                        <div class="column--two">
+                            <div class="row">
+                                <input class="button accent" type="reset" value="Clear Form" />
+                            </div>
+                        </div>
+                        <div class="column--two">
+                            <a class="button" id="submit">Send Message</a>
+                        </div>
+                        
+                    </div>
+                </form>
+                <hr>
+                <header>
+                    <h1>Find me on</h1>
+                </header>
+                <ul class="social">
+                    <li>
+                        <a href="https://github.com/CurrrBell" target="_blank" class="icon fa-github">
+                            <span class="label">Github</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/currrbell" target="_blank" class="icon fa-linkedin">
+                            <span class="label">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/CurrrBell" target="_blank" class="icon fa-twitter">
+                            <span class="label">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/currrbell/" target="_blank" class="icon fa-instagram">
+                            <span class="label">Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/chris.bell.33865" target="_blank" class="icon fa-facebook">
+                            <span class="label">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://soundcloud.com/currrbell" target="_blank" class="icon fa-soundcloud">
+                            <span class="label">Soundcloud</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <div id="copy">
+                    <span>&copy; Chris Bell - All rights reserved</span>
+                </div>
+            </section>
+        </section>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/site.js"></script>
 </html>
