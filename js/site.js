@@ -54,6 +54,28 @@ $(document).scroll(function(){
     else{
         NihContents.removeClass('sticky');
     }
+
+    if($(window).scrollTop() < $('#work').position().top - 110){
+        $('#home').addClass('active');
+        $('#my_work').removeClass('active');
+        $('#projects').removeClass('active');
+        $('#contact_me').removeClass('active');
+    }else if($(window).scrollTop() < $('#experience').position().top - 100){
+        $('#projects').addClass('active');
+        $('#home').removeClass('active');
+        $('#my_work').removeClass('active');
+        $('#contact_me').removeClass('active');
+    }else if($(window).scrollTop() < $('#contact').position().top - 100){
+        $('#my_work').addClass('active');
+        $('#home').removeClass('active');
+        $('#projects').removeClass('active');
+        $('#contact_me').removeClass('active');
+    }else{
+        $('#contact_me').addClass('active');
+        $('#home').removeClass('active');
+        $('#projects').removeClass('active');
+        $('#my_work').removeClass('active');
+    }
 });
 
 // Scrolly.

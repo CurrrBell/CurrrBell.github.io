@@ -380,6 +380,12 @@ img {
     margin-top: -100px; }
 
   #contact {
+    display: none; }
+
+  #contact_me {
+    display: none; }
+
+  #gdusa {
     display: none; } }
 @media (max-width: 414px) {
   body {
