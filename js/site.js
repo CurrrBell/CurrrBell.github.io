@@ -1,4 +1,4 @@
-$(window).scroll(function(){
+$(document).scroll(function(){
     var navHeight = 80;
     var contentsMargin = 20;
     var currentPosition = window.scrollY;
@@ -44,7 +44,7 @@ $(window).scroll(function(){
     if(currentPosition > Nih){
         NihContents.addClass('sticky');
 
-        if(currentPosition > $('.experience').position().top - navHeight - contentsMargin - 50){
+        if(currentPosition > $('#experience').position().top - navHeight - contentsMargin - 50){
             NihContents.addClass('scrolled');
         }
         else{
@@ -54,4 +54,16 @@ $(window).scroll(function(){
     else{
         NihContents.removeClass('sticky');
     }
+});
+
+// Scrolly.
+$(window).load(function() {
+
+    var x = parseInt($('#top-nav').css('height'));
+  
+    $('#nav a, .scrolly').scrolly({
+      speed: 1000,
+      offset: x
+    });
+  
 });
