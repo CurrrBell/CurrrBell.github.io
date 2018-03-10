@@ -87,6 +87,7 @@ nav{
         // margin: 0;
         // margin-left: 3%;
         padding: 0;
+        overflow: unset;
 
         .column,
         .column--three{
@@ -552,7 +553,6 @@ img{
     
     nav{
         .row{
-            overflow: unset;
             .column{
                 display: none;
             }
