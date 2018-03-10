@@ -346,8 +346,10 @@ img {
   .row {
     margin: 0 -2%; } }
 @media (max-width: 768px) {
-  nav .row .column {
-    display: none; }
+  nav .row {
+    overflow: unset; }
+    nav .row .column {
+      display: none; }
 
   #main {
     margin-top: 80px;
