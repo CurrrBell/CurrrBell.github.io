@@ -38,7 +38,8 @@ nav {
   nav .row {
     height: inherit;
     min-height: 0;
-    padding: 0; }
+    padding: 0;
+    overflow: unset; }
     nav .row .column,
     nav .row .column--three {
       height: 76px; }
@@ -346,10 +347,8 @@ img {
   .row {
     margin: 0 -2%; } }
 @media (max-width: 768px) {
-  nav .row {
-    overflow: unset; }
-    nav .row .column {
-      display: none; }
+  nav .row .column {
+    display: none; }
 
   #main {
     margin-top: 80px;
